@@ -1,0 +1,26 @@
+---
+layout: default
+title: Food Tales | Tresna Bali Cooking School
+description: Food Blog about Authentic Balinese Food, Recipes and Culture.
+author: Frances Tse Ardika
+headerType: light-bg
+bodyClass: post-page
+---
+<div class="row">
+<section class="nine columns white-text">
+  {% for post in site.posts limit:9 %}
+
+    <div class="post six columns">
+      <img src="{{post.featured-image_path}}">
+      <h4> {{post.title}}</h4>
+      <p> {{post.excerpt}}</p>
+      <a href="{{post.url}}"> Read More ... </a>
+    </div>
+
+  {% endfor %}
+</section>
+
+<section class="sidebar three columns">
+bob
+</section>
+</div>

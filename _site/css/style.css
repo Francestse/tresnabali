@@ -1,0 +1,431 @@
+/* ------ CSS REST ----- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ----- Universal Style ----- */
+
+body {
+  font-family: <link href="https://fonts.googleapis.com/css?family=Karma:300,600" rel="stylesheet">, serif;
+  font-size: 1.8rem;
+}
+
+a,h1,h2,h3,h4,h5,h6 {
+  font-family: 'Raleway 500', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a.button.button-primary {
+  background-color: #970238;
+  font-size: 1.3rem;
+  border: none;
+}
+
+a.button.button-primary:hover {
+  background-color: #334D69;
+}
+
+p {
+  text-align: justify;
+}
+
+.center {
+  text-align: center;
+}
+
+img{
+  max-width: 100%
+}
+footer{
+  background-image: url(../images/dark_embroidery.png);
+  color: white;
+}
+
+.rel,
+section {
+  position: relative;
+}
+
+.white-text {
+  color: white;
+}
+
+.blurb {
+  padding: 5% 5% 5% 10%;
+}
+
+.back-img {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 25vh;
+  background-color: rgb(220,220,220);
+}
+
+.banner {
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  padding-top: 30vh;
+}
+
+.mobile-show {
+  display: none;
+}
+
+.block {
+  display: block;
+}
+
+/* ------ Header Section ------ */
+header {
+  clear: both;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 99999;
+  transition: 1s;
+}
+
+header li {
+  list-style: none;
+  line-height: 1.2;
+  text-align: center;
+  vertical-align: middle;
+  display: inline-block;
+  margin: 0 4px;
+}
+
+.active {
+  border-bottom: 2px solid #7D6D61;
+  background-color: white;
+  transition: 0.5s;
+}
+
+.light-bg {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.light-bg.active {
+  background-color: rgba(255, 255, 255, 1);;
+}
+header {
+  padding: 1% 5%;
+}
+
+header img {
+  max-width: 250px;
+}
+
+nav {
+  display: inline-block;
+  width: 70%;
+  text-align: right;
+  vertical-align: top;
+  position: fixed;
+  right: 0;
+}
+
+nav a {
+  padding: 25px 0px;
+}
+nav li a:hover {
+  background-color: #334D69;
+  color: white;
+  border-radius: 10%;
+}
+/* I am targetting the a links inside the nav */
+
+.nav-stacked {
+  width: 8rem;
+  display: inline-block;
+}
+
+.dropdown-nav {
+  position:absolute;
+  right: 2vw;
+  top: 2vh;
+}
+
+.dropdown-content li {
+  display: block;
+}
+
+.dropdown-nav a{
+  text-align: right;
+  display: block
+}
+
+span.bold {
+  font-weight: bold;
+}
+
+/* -----Home Page------ */
+
+/* --Home-Above-the-fold-- */
+.title-section {
+  background-image: url("../images/tresna-bali-cooking-class-homepage.jpg");
+}
+
+.title-section h1 {
+  margin:0;
+}
+
+.title-section .center {
+  padding: 30vh 0;
+  color: white;
+}
+
+/* --About Carousel-Section-- */
+
+/* --Carousel-- */
+
+.owl-dots {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
+
+.carousel-section ul {
+  list-style: none;
+  text-align: center;
+  line-height: 1.3;
+  font-size: 1.8rem;
+  font-family: 'Raleway 500', sans-serif;
+}
+/* -----About Cooking School Page------ */
+
+/* --Cooking-Above-the-fold-- */
+
+.cooking-school .intro {
+  padding: 1% 3%;
+  margin-top: 20vh;
+  width: auto;
+  position: absolute;
+  left:10px;
+  right:10px;
+  bottom:10px;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+
+.intro p {
+  text-align: justify;
+  line-height: 1.2;
+}
+
+.intro h3 {
+  margin: 0;
+}
+
+
+/* --Cooking School-About Food Section--*/
+
+.about-food .owl-carousel {
+  padding: 5%;
+}
+
+.about-food .blurb {
+  padding: 10% 5% 5% 10%;
+}
+
+
+/* --Cooking School-About Location Section--*/
+
+/*.aboutgarden {
+  background-image: url("../images/aboutgarden.jpg");
+}
+
+/* --Cooking School-About Us Section--*/
+
+/*.aboutus {
+  background-image: url("../images/aboutus.jpg");
+}
+
+/* -----About Cooking Class Page------ */
+
+/* --Cooking-Class-Above-the-fold-- */
+
+.cooking-class .row .intro {
+  padding: 1% 3%;
+}
+
+.cooking-class .intro p {
+  text-align: justify;
+}
+
+.cooking-class .intro h3 {
+  margin: 0;
+}
+
+.cooking-class .row .intro {
+  width: 46%;
+  float: right;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+/* --Cooking Class-Menu Section--*/
+
+.aboutfood {
+  background-image: url("../images/aboutfood.jpg");
+}
+
+/*.row .half-width a {
+  text-decoration: none;
+}
+
+.row .half-width a:hover {
+  background-color: #7D6D61;
+  border-radius: 10%;
+}*/
+
+/* --Cooking Class-Price Section--*/
+
+.aboutgarden {
+  background-image: ;
+}
+
+/* --Cooking Class-Benefits Section--*/
+
+.aboutus {
+  background-image: url("../images/aboutus.jpg");
+}
+
+/* -----Private Kitchen Page------ */
+
+/* --Private-Kitchen-Above-the-fold-- */
+
+.private-kitchen .row .intro {
+  padding: 1% 3%;
+}
+
+.intro p {
+  text-align: justify;
+}
+
+.intro h3 {
+  margin: 0;
+}
+
+.row .intro {
+  width: 46%;
+  float: left;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+/* --Private-Kitchen-Menu Section--*/
+
+
+/* --Private-Kitchen-Price Section--*/
+
+
+
+
+/* Blog Styles */
+
+.post-page {
+  background-image: url("../images/dark_embroidery.png");
+  background-size: auto;
+  padding-top: 30vh;
+}
+
+.post-body {
+  background-image: url("../images/dark_embroidery.png");
+  background-size: auto;
+  min-height: 80vh;
+  padding: 20vh 4% 5vh;
+}
+
+/* --Contact Page-- */
+
+.contact-page {
+  padding: 10%;
+}
+
+/* Book Now Page */
+.tall {
+    min-height: 80vh;
+    padding: 5%;
+    padding-top: 130px;
+}
+/* --Footer Section-- */
+
+footer {
+  padding: 1% 4%;
+  clear: both;
+}
+
+footer .col-2 .fa{
+  font-size: 5rem;
+  padding: 0 3px;
+  border-radius: 10%;
+}
+
+footer .facebook{
+  color: #3b5998;
+  background-color: white;
+  display: inline-block;
+  border-radius: 10%;
+}
+
+
+
+
+
+/*---Tablet Styles----*/
+
+@media screen and (max-width:800px) {
+  .mobile-show {
+    display: inline-block;
+  }
+
+  .homeabout{
+    min-height: 69vw;
+  }
+
+  .mobile-hide {
+    display: none;
+  }
+
+  header nav {
+    text-align:center;
+    width: 100%;
+  }
+
+  header img {
+    text-align:center;
+  }
+
+  .intro {
+    min-height: 50vh;
+  }
+
+  /* Collapse columns */
+
+  .row .half-width {
+    width: 100%;
+  }
+
+  .row .half-width.left {
+    width: 100%
+  }
+
+}
+
+
+
+/*---Small Tablet or Large Phone Styles----*/
+
+@media screen and (max-width:650px) {
+}
+
+*---Phone Styles----*/
+
+@media screen and (max-width:450px){
+}
