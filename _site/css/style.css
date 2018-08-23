@@ -8,12 +8,12 @@
 /* ----- Universal Style ----- */
 
 body {
-  font-family: <link href="https://fonts.googleapis.com/css?family=Karma:300,600" rel="stylesheet">, serif;
+  font-family: 'Karma', serif;
   font-size: 1.8rem;
 }
 
 a,h1,h2,h3,h4,h5,h6 {
-  font-family: 'Raleway 500', sans-serif;
+  font-family: font-family: 'Roboto', sans-serif;
 }
 
 a {
