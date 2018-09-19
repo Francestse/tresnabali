@@ -8,12 +8,12 @@
 /* ----- Universal Style ----- */
 
 body {
-  font-family: 'Karma', serif;
+  font-family: 'Lato', serif;
   font-size: 1.8rem;
 }
 
 a,h1,h2,h3,h4,h5,h6 {
-  font-family: font-family: 'Roboto', sans-serif;
+  font-family: font-family: 'Karma', sans-serif;
 }
 
 a {
