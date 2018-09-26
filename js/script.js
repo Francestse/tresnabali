@@ -1,5 +1,4 @@
 $( document ).ready(function() {
-
   $(window).on("scroll", function() {
       if($(window).scrollTop() > 50) {
           $("header").addClass("active");
@@ -8,8 +7,6 @@ $( document ).ready(function() {
          $("header").removeClass("active");
       }
   });
-
-
 });
 
 $( document ).ready(function() {
@@ -25,6 +22,17 @@ $(document).ready(function(){
     loop:true,
     margin:0,
     autoplay:true,
+    autoplayTimeout:6000,
+    autoplayHoverPause:true
+  });
+});
+
+$(document).ready(function(){
+  $("#tripadvisor-carousel").owlCarousel({
+    items:1,
+    loop:true,
+    margin:0,
+    autoplay:false,
     autoplayTimeout:3000,
     autoplayHoverPause:true
   });
