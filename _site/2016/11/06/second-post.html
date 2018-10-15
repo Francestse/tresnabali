@@ -40,15 +40,17 @@
 
   <!-- header-section -->
   <header class="light-bg">
-    <a href="/"><img src="/images/logo-sidetext.png" alt="logo" /></a>
+    <a href="/">
+      <img class="logo" src="/images/logo-sidetext.png" alt="logo" />
+    </a>
     <nav class="mobile-hide">
       <ul>
-        <li><a class="nav-stacked" href="/our-school">Our School</a></li>
+        <!-- <li><a class="nav-stacked" href="/our-school">Our School</a></li>
         <li><a class="nav-stacked" href="/our-classes">Our Classes</a></li>
         <li><a class="nav-stacked" href="/private-kitchen">Private Kitchen</a></li>
-        <li><a class="nav-stacked" href="/food-tales">Food Tales</a></li>
-        <li><a class="nav-stacked" href="/contact">Contact<a></li>
-        <li><a class="button button-primary" href="#">Book Now</a></li>
+        <li><a class="nav-stacked" href="/food-tales">Food Tales</a></li> -->
+        <!-- <li><a class="nav-stacked" href="/contact">Contact</a></li> -->
+        <li><a class="button button-primary" href="/booknow">Book Now</a></li>
       </ul>
     </nav>
 
@@ -56,13 +58,13 @@
       <a href="#"><i class="fa fa-bars fa-3x" aria-hidden="true"></i></a>
        <div class="dropdown-content mobile-hide">
          <ul>
-           <li><a href="/">Home</a></li>
+           <!-- <li><a href="/">Home</a></li>
            <li><a href="/our-school">Our School</a></li>
            <li><a href="/our-classes">Our Classes</a></li>
            <li><a href="/private-kitchen">Private Kitchen</a></li>
            <li><a href="/food-tales">Food Tales</a></li>
-           <li><a href="/contact">Contact<a></li>
-           <li><a href="#" class="button button-primary">Book Now</a></li>
+           <li><a href="/contact">Contact<a></li> -->
+           <li><a href="/booknow">Book Now</a></li>
          </ul>
       </div>
     </div>
@@ -77,10 +79,14 @@
 </section>
 
 
+  <div class="maps">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15782.77796337266!2d115.28767!3d-8.529012!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x96335c981fc15f85!2sTresna+Bali+Cooking+School!5e0!3m2!1sen!2sus!4v1538139642876" width="600" height="200" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" allowfullscreen></iframe>
+  </div>
+
   <!-- Footer Section (needs to parallax up)-->
-    <footer>
+  <footer>
       <div class="grid">
-        <div class="col">
+        <div class="col-5">
           <h5>Our Food Tales</h5>
           <ul>
             
@@ -95,43 +101,45 @@
           </ul>
         </div>
 
-        <!-- How to link to Facebook and Instagram pages in a new window? -->
-        <div class="col-2">
-          <h5>Follow Us</h5>
-          <a class="facebook" href="https://www.facebook.com/tresnabalicookingschool/?hc_ref=SEARCH&fref=nf"><i class="fa fa-facebook-official" aria-hidden="true" target="_blank"></i></a>
-          <a class="instagram" href="https://www.instagram.com/tresnabalicookingschool/"><i class="fa fa-instagram" aria-hidden="true" target="_blank"></i></a>
+        <div class="col-1"></div>
+
+        <div class="col-6">
+          <h5>Contact us</h5>
+          <ul>
+
+            <li class="block">
+              <a href="tel:+628123963033">
+                <i class="fa fa-phone-square" aria-hidden="true"></i> +62.81.2396.3033
+              </a>
+            </li>
+
+            <li class="block">
+              <a href="mailto:frances@tresnabali.com">
+                <i class="fa fa-envelope" aria-hidden="true"></i> frances@tresnabali.com
+              </a>
+            </li>
+
+            <li class="block">
+              <i class="fa fa-map-marker" aria-hidden="true"></i> Gang Tresna, Jalan Raya Goa Gajah, Banjar Lebah, Bedulu, <br />Ubud, Bali, Indonesia
+            </li>
+          </ul>
         </div>
 
-        <div class="col">
-          <h5>Contact Us</h5>
-
-          <!-- I would like to add a link to the exact google map location-->
-          <a href="https://www.google.co.id/search?rlz=1C5CHFA_enID720ID720&q=Gang+Tresna,+Jalan+Raya+Goa+Gajah,+Banjar+Lebah,+Bedulu,+Ubud,+Bali,+Indonesia&npsic=0&rflfq=1&rlha=0&rllag=-8528283,115288165,97&tbm=lcl&ved=0ahUKEwj65dz038TXAhUEo48KHezzBo0QtgMIJw&tbs=lrf:!2m1!1e2!2m1!1e3!3sIAE,lf:1,lf_ui:2&rldoc=1#rlfi=hd:;si:10823096137938984837;mv:!1m3!1d5795.249837172269!2d115.28816534999999!3d-8.52828324999999!3m2!1i1005!2i564!4f13.1">
-              <p><i class="fa fa-map-marker" aria-hidden="true"></i> Gang Tresna, Jalan Raya Goa Gajah, Banjar Lebah, Bedulu, Ubud, Bali, Indonesia</p>
-            </a>
-    <!-- I would like to add a link so people can call me directly from mobile phones -->
-            <a href="tel:+628123963033">
-              <p><i class="fa fa-phone-square" aria-hidden="true"></i> +62.81.2396.3033 </p>
-            </a>
-    <!-- I would like to add a link that goes to booking form directly  -->
-            <a href="mailto:frances@tresnabali.com">
-              <p><i class="fa fa-envelope" aria-hidden="true"></i> frances@tresnabali.com </p>
-            </a>
-          </div>
+        <div class="col center">
+          <a class="facebook" href="https://www.facebook.com/tresnabalicookingschool/?hc_ref=SEARCH&fref=nf"><i class="fa fa-facebook-official" aria-hidden="true" target="_blank"></i> Facebook</a>
+          |
+          <a class="instagram" href="https://www.instagram.com/tresnabalicookingschool/"><i class="fa fa-instagram" aria-hidden="true" target="_blank"></i> Instagram</a>
+          | &copy; 2018 Tresna Bali
         </div>
       </div>
-    </footer>
+    </div>
+  </footer>
 
   <!-- JQuery Scripts -->
-
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.js"></script>
-
   <script src="/js/owl.carousel.min.js"></script>
 
   <!-- Our Awesome Custom Scripts -->
-
-    <script src="/js/script.js"></script>
-
-  <!--  -->
-  </body>
-  </html>
+  <script src="/js/script.js"></script>
+</body>
+</html>

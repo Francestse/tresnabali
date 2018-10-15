@@ -12,8 +12,8 @@ body {
   font-size: 1.8rem;
 }
 
-a,h1,h2,h3,h4,h5,h6 {
-  font-family: font-family: 'Karma', sans-serif;
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'Karma', sans-serif;
 }
 
 a {
@@ -40,12 +40,17 @@ p {
   text-align: center;
 }
 
-img{
+img {
   max-width: 100%
 }
+
 footer{
   background-image: url(../images/dark_embroidery.png);
   color: white;
+}
+
+.mapouter {
+  margin: 20px 0 40px;
 }
 
 .rel,
@@ -76,8 +81,15 @@ section {
 .banner {
   background-size: cover;
   background-position: center;
+  height: 95vh;
+  padding-top: 15vh;
+  background-color: #f2f2f2;
+}
+
+.banner-no-image {
   min-height: 100vh;
-  padding-top: 30vh;
+  padding-top: 20vh;
+  background-color: #f2f2f2;
 }
 
 .mobile-show {
@@ -86,6 +98,10 @@ section {
 
 .block {
   display: block;
+}
+
+.block .fa {
+  margin-right: 5px;
 }
 
 /* ------ Header Section ------ */
@@ -108,7 +124,6 @@ header li {
 }
 
 .active {
-  border-bottom: 2px solid #7D6D61;
   background-color: white;
   transition: 0.5s;
 }
@@ -120,35 +135,42 @@ header li {
 .light-bg.active {
   background-color: rgba(255, 255, 255, 1);;
 }
+
 header {
   padding: 1% 2%;
 }
 
-header img {
+header .logo {
   max-width: 20%;
+  max-height: 70px;
 }
 
 nav {
   display: inline-block;
   width: 70%;
   text-align: right;
-  vertical-align: top;
+  /* vertical-align: bottom; */
   position: fixed;
   right: 2%;
 }
 
 nav a {
-  padding: 25px 0px;
+  padding: 9px 12px;
 }
+
+nav ul {
+  margin: 20px 0;
+}
+
 nav li a.nav-stacked:hover {
   background-color: #334D69;
   color: white;
-  border-radius: 10%;
+  border-radius: 4px;
 }
+
 /* I am targetting the a links inside the nav */
 
 .nav-stacked {
-  width: 8rem;
   display: inline-block;
 }
 
@@ -175,7 +197,7 @@ span.bold {
 
 /* --Home-Above-the-fold-- */
 .title-section {
-  background-image: url("../images/tresna-bali-cooking-class-homepage.jpg");
+  background-image: url("../images/home-organic-garden-tresna-bali-cooking-school.jpg");
 }
 
 .title-section h1 {
@@ -187,7 +209,24 @@ span.bold {
   color: white;
 }
 
+.class-section {
+  background-color: #f2f2f2;
+}
+
 /* --About Carousel-Section-- */
+svg.mask {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    stroke: #bae1fc;
+    fill: #bae1fc;
+}
+
+.about {
+  background: #bae1fc;
+}
 
 /* --Carousel-- */
 
@@ -359,29 +398,46 @@ span.bold {
     padding: 5%;
     padding-top: 130px;
 }
-/* --Footer Section-- */
 
-footer {
-  padding: 1% 4%;
-  clear: both;
+form {
+
 }
 
-footer .col-2 .fa{
-  font-size: 5rem;
-  padding: 0 3px;
-  border-radius: 10%;
+/* Style inputs with type="text", select elements and textareas */
+input[type=text], input[type=number], input[type=email], select, textarea {
+    width: 100%; /* Full width */
+    padding: 12px; /* Some padding */
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
 }
 
-footer .facebook {
-  color: white;
-  display: inline-block;
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
 }
 
-footer .facebook:hover {
-  color: #3b5998;
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+    background-color: #45a049;
 }
 
-
+/* Add a background color and some padding around the form */
+.form-container {
+    border-radius: 4px;
+    background-color: white;
+    padding: 5%;
+    margin-top: 0;
+    margin-bottom: 5%;
+}
 
 /*---Tablet Styles----*/
 
@@ -441,7 +497,6 @@ footer .facebook:hover {
 .tripadvisor-section {
   margin-top: 0;
   padding: 5% 0;
-  background-color: #f1f1f1;
 }
 
 .tripadvisor-section .section-title {
@@ -502,6 +557,38 @@ footer .facebook:hover {
 
 .tripadvisor-review .review-link {
   margin-top: -8px;
+}
+
+.highlight {
+  background-color: #fff2ac;
+  background-image: linear-gradient(to right, #ffe359 0%, #fff2ac 100%);
+}
+
+/* --Footer Section-- */
+
+footer {
+  padding: 4% 4% 1%;
+  clear: both;
+}
+
+footer .col-2 .fa {
+  font-size: 3rem;
+  padding: 0 3px;
+  border-radius: 4px;
+}
+
+footer .facebook {
+  color: white;
+  display: inline-block;
+}
+
+footer .facebook:hover {
+  color: #3b5998;
+}
+
+.maps iframe {
+    pointer-events: none;
+    width: 100%;
 }
 
 /*---Small Tablet or Large Phone Styles----*/
