@@ -80,15 +80,11 @@ section {
 .banner {
   background-size: cover;
   background-position: center;
-  height: 99vh;
-  padding-top: 10vh;
-  background-color: #f2f2f2;
 }
 
 .banner-no-image {
   min-height: 100vh;
   padding-top: 20vh;
-  background-color: #f2f2f2;
 }
 
 .mobile-show {
@@ -203,6 +199,8 @@ span.bold {
 /* --Home-Above-the-fold-- */
 .home-banner {
   background-image: url("../images/home-organic-garden-tresna-bali-cooking-school.jpg");
+  min-height: 99vh;
+  padding-top: 15vh;
 }
 
 .home-banner h1 {
@@ -225,6 +223,7 @@ span.bold {
 @media screen and (max-width:650px) {
   .home-banner {
     background-image: url("../images/mobile-bg.jpg");
+    min-height: 95vh;
   }
 }
 
