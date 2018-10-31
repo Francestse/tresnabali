@@ -509,6 +509,10 @@ input[type=submit]:hover {
   padding: 5% 0;
 }
 
+.tripadvisor-section .review {
+  font-size: 1.4rem;
+}
+
 .tripadvisor-section .section-title {
   margin-bottom: 40px;
 }

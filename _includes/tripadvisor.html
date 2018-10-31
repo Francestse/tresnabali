@@ -1,10 +1,10 @@
 <!--Tripadvisor-section to show 3 reviews that pop up into the full reviews on a separate window (but not linked to Tripadvisor, want to keep them on the Villa Sancita site) -->
   <section class="tripadvisor-section">
-    <div class="grid-equalHeight no-margin">
+    <div class="grid no-margin">
 
         <div class="container">
-          <div class="grid-equalHeight">
-            <div class="col-3_sm-12 tripadvisor-branding" align="center">
+          <div class="grid">
+            <div class="col-2_sm-12 tripadvisor-branding" align="center">
                 <div class="title">
                   <h5>
                     <a href="https://www.tripadvisor.co.uk/Attraction_Review-g297701-d12396111-Reviews-Tresna_Bali_Cooking_School-Ubud_Bali.html">
@@ -24,7 +24,7 @@
 
             </div>
 
-            <div class="col-9_sm-12">
+            <div class="col-10_sm-12">
               <div class="owl-carousel owl-theme" id="tripadvisor-carousel">
                 {% for review in site.reviews reversed %}
                 <div class="tripadvisor-review row grid">
