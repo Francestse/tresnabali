@@ -136,12 +136,17 @@ header li {
 }
 
 header {
-  padding: 1% 2%;
+  padding: 2%;
 }
 
 header .logo {
-  max-width: 20%;
-  max-height: 70px;
+  max-width: 25%;
+}
+
+@media screen and (max-width:650px) {
+  header .logo {
+    max-width: 50%;
+  }
 }
 
 nav {
@@ -195,9 +200,14 @@ span.bold {
 /* -----Home Page------ */
 
 /* --Home-Above-the-fold-- */
-.title-section {
+.home-banner {
   background-image: url("../images/home-organic-garden-tresna-bali-cooking-school.jpg");
-  background-image: url("mobile-bg.jpg");
+}
+
+@media screen and (max-width:650px) {
+  .home-banner {
+    background-image: url("../images/mobile-bg.jpg");
+  }
 }
 
 .title-section h1 {
@@ -205,7 +215,7 @@ span.bold {
 }
 
 .title-section .center {
-  padding: 30vh 0;
+  padding: 30vh 5%;
   color: white;
 }
 
@@ -573,12 +583,12 @@ footer .facebook:hover {
   width: 100%;
 }
 
-/*---Small Tablet or Large Phone Styles----*/
+/*--- Small Tablet or Large Phone Styles----*/
 
 @media screen and (max-width:650px) {
 }
 
-*---Phone Styles----*/
+/*--- Phone Styles ----*/
 
 @media screen and (max-width:450px){
 }
