@@ -1,8 +1,8 @@
 ---
 username: DayTrip61247
 location:
-profile-pic: 'https://media-cdn.tripadvisor.com/media/photo-l/14/9f/65/d0/ryan-c.jpg'
-number-reviews: '2'
+profile-pic: 'https://media-cdn.tripadvisor.com/media/photo-l/01/2e/70/93/avatar019.jpg'
+number-reviews:
 title: The highlight of our honeymoon in Bali!
 rating: '5'
 permalink: >-
