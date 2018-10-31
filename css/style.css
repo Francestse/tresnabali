@@ -80,8 +80,8 @@ section {
 .banner {
   background-size: cover;
   background-position: center;
-  height: 95vh;
-  padding-top: 15vh;
+  height: 99vh;
+  padding-top: 10vh;
   background-color: #f2f2f2;
 }
 
@@ -203,6 +203,23 @@ span.bold {
 /* --Home-Above-the-fold-- */
 .home-banner {
   background-image: url("../images/home-organic-garden-tresna-bali-cooking-school.jpg");
+}
+
+.home-banner h1 {
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.home-banner h2 {
+  font-family: 'Lato', serif;
+  font-size: 3.2rem;
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.home-banner hr {
+  margin: 1.5rem auto 2rem;
+  width: 8vw;
+  border-top: 2px solid white;
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.5);
 }
 
 @media screen and (max-width:650px) {
