@@ -199,7 +199,7 @@ span.bold {
 /* --Home-Above-the-fold-- */
 .home-banner {
   background-image: url("../images/home-organic-garden-tresna-bali-cooking-school.jpg");
-  min-height: 99vh;
+  max-height: 99vh;
   padding-top: 15vh;
 }
 
@@ -223,7 +223,8 @@ span.bold {
 @media screen and (max-width:650px) {
   .home-banner {
     background-image: url("../images/mobile-bg.jpg");
-    min-height: 95vh;
+    padding-top: 0;
+    max-height: 90vh;
   }
 }
 
@@ -537,6 +538,13 @@ input[type=submit]:hover {
 .tripadvisor-profile {
   text-align: right;
   padding-right: 30px
+}
+
+@media screen and (max-width:650px) {
+  .tripadvisor-profile {
+    margin-top: 5%;
+    text-align: center;
+  }
 }
 
 .tripadvisor-review {
