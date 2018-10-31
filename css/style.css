@@ -136,11 +136,12 @@ header li {
 }
 
 header {
-  padding: 2%;
+  padding: 1% 2%;
 }
 
 header .logo {
   max-width: 25%;
+  max-height: 70px;
 }
 
 @media screen and (max-width:650px) {
