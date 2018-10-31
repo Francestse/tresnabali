@@ -6,7 +6,6 @@
 }
 
 /* ----- Universal Style ----- */
-
 body {
   font-family: 'Lato', serif;
   font-size: 1.8rem;
@@ -198,6 +197,7 @@ span.bold {
 /* --Home-Above-the-fold-- */
 .title-section {
   background-image: url("../images/home-organic-garden-tresna-bali-cooking-school.jpg");
+  background-image: url("mobile-bg.jpg");
 }
 
 .title-section h1 {
@@ -246,7 +246,6 @@ svg.mask {
 /* -----About Cooking School Page------ */
 
 /* --Cooking-Above-the-fold-- */
-
 .cooking-school .intro {
   padding: 1% 3%;
   margin-top: 20vh;
@@ -258,7 +257,6 @@ svg.mask {
   background-color: rgba(255, 255, 255, 0.7);
 }
 
-
 .intro p {
   text-align: justify;
   line-height: 1.2;
@@ -268,9 +266,7 @@ svg.mask {
   margin: 0;
 }
 
-
 /* --Cooking School-About Food Section--*/
-
 .about-food .owl-carousel {
   padding: 5%;
 }
@@ -278,7 +274,6 @@ svg.mask {
 .about-food .blurb {
   padding: 10% 5% 5% 10%;
 }
-
 
 /* --Cooking School-About Location Section--*/
 
@@ -315,7 +310,6 @@ svg.mask {
 }
 
 /* --Cooking Class-Menu Section--*/
-
 .aboutfood {
   background-image: url("../images/aboutfood.jpg");
 }
@@ -336,7 +330,6 @@ svg.mask {
 }
 
 /* --Cooking Class-Benefits Section--*/
-
 .aboutus {
   background-image: url("../images/aboutus.jpg");
 }
@@ -344,7 +337,6 @@ svg.mask {
 /* -----Private Kitchen Page------ */
 
 /* --Private-Kitchen-Above-the-fold-- */
-
 .private-kitchen .row .intro {
   padding: 1% 3%;
 }
@@ -363,16 +355,11 @@ svg.mask {
   background-color: rgba(255, 255, 255, 0.7);
 }
 
-/* --Private-Kitchen-Menu Section--*/
+/* -- Private-Kitchen-Menu Section--*/
 
-
-/* --Private-Kitchen-Price Section--*/
-
-
-
+/* -- Private-Kitchen-Price Section--*/
 
 /* Blog Styles */
-
 .post-page {
   background-image: url("../images/dark_embroidery.png");
   background-size: auto;
@@ -387,20 +374,15 @@ svg.mask {
 }
 
 /* --Contact Page-- */
-
 .contact-page {
   padding: 10%;
 }
 
-/* Book Now Page */
+/* --Book Now Page */
 .tall {
     min-height: 80vh;
     padding: 5%;
     padding-top: 130px;
-}
-
-form {
-
 }
 
 /* Style inputs with type="text", select elements and textareas */
@@ -587,8 +569,8 @@ footer .facebook:hover {
 }
 
 .maps iframe {
-    pointer-events: none;
-    width: 100%;
+  pointer-events: none;
+  width: 100%;
 }
 
 /*---Small Tablet or Large Phone Styles----*/
