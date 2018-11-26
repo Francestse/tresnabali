@@ -1,6 +1,6 @@
 ---
-username: Meghan B
-location: 'Sydney, Australia'
+username: Ryan C
+location: 'Philadelphia, USA'
 profile-pic: >-
   https://media-cdn.tripadvisor.com/media/photo-l/03/2a/12/26/facebook-avatar.jpg
 number-reviews:
@@ -9,3 +9,5 @@ rating: '5'
 permalink: >-
   //www.tripadvisor.co.uk/ShowUserReviews-g297701-d12396111-r613334201-Tresna_Bali_Cooking_School-Ubud_Gianyar_Bali.html
 ---
+
+A gift from my wife on our honeymoon, this turned into the most memorable experience of our entire Bali adventure! We found no better food on the entire island. Using garden fresh ingredients hand picked from their garden, the food wasn't even the best part. Adi and Frances were incredible hosts, the most caring and generous people we met while in Indonesia. Truly wonderful and a must do on the island.
