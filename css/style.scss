@@ -3,10 +3,9 @@
 
 @import "variables";
 
-/* ----- Universal Style ----- */
+// General Styles
 body {
-  font-family: "Lato", serif;
-  /* font-size: 1.8rem; */
+  font-family: $bodyFont;
 }
 
 h1,
@@ -35,7 +34,7 @@ a.button.button-primary:hover {
 }
 
 p {
-  text-align: justify;
+  font-size: $bodyFontSize;
 }
 
 .center {
@@ -58,10 +57,6 @@ footer {
 .rel,
 section {
   position: relative;
-}
-
-.white-text {
-  color: white;
 }
 
 .blurb {
