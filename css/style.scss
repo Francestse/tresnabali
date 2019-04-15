@@ -1,18 +1,19 @@
-/* ------ CSS REST ----- */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+---
+---
 
 /* ----- Universal Style ----- */
 body {
-  font-family: 'Lato', serif;
+  font-family: "Lato", serif;
   /* font-size: 1.8rem; */
 }
 
-h1,h2,h3,h4,h5,h6 {
-  font-family: 'Karma', sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Karma", sans-serif;
 }
 
 a {
@@ -28,7 +29,7 @@ a.button.button-primary {
 }
 
 a.button.button-primary:hover {
-  background-color: #334D69;
+  background-color: #334d69;
 }
 
 p {
@@ -40,10 +41,10 @@ p {
 }
 
 img {
-  max-width: 100%
+  max-width: 100%;
 }
 
-footer{
+footer {
   background-image: url(../images/dark_embroidery.png);
   color: white;
 }
@@ -74,7 +75,7 @@ section {
   background-repeat: no-repeat;
   background-position: center;
   min-height: 25vh;
-  background-color: rgb(220,220,220);
+  background-color: rgb(220, 220, 220);
 }
 
 .banner {
@@ -128,7 +129,7 @@ header li {
 }
 
 .light-bg.active {
-  background-color: rgba(255, 255, 255, 1);;
+  background-color: rgba(255, 255, 255, 1);
 }
 
 header {
@@ -140,7 +141,7 @@ header .logo {
   max-height: 70px;
 }
 
-@media screen and (max-width:800px) {
+@media screen and (max-width: 800px) {
   header .logo {
     max-width: 50%;
   }
@@ -164,7 +165,7 @@ nav ul {
 }
 
 nav li a.nav-stacked:hover {
-  background-color: #334D69;
+  background-color: #334d69;
   color: white;
   border-radius: 4px;
 }
@@ -176,7 +177,7 @@ nav li a.nav-stacked:hover {
 }
 
 .dropdown-nav {
-  position:absolute;
+  position: absolute;
   right: 2vw;
   top: 2vh;
 }
@@ -185,9 +186,9 @@ nav li a.nav-stacked:hover {
   display: block;
 }
 
-.dropdown-nav a{
+.dropdown-nav a {
   text-align: right;
-  display: block
+  display: block;
 }
 
 span.bold {
@@ -208,7 +209,7 @@ span.bold {
 }
 
 .home-banner h2 {
-  font-family: 'Lato', serif;
+  font-family: "Lato", serif;
   font-size: 3.2rem;
   text-shadow: 2px 2px rgba(0, 0, 0, 0.5);
 }
@@ -220,7 +221,7 @@ span.bold {
   text-shadow: 2px 2px rgba(0, 0, 0, 0.5);
 }
 
-@media screen and (max-width:800px) {
+@media screen and (max-width: 800px) {
   .home-banner {
     background-image: url("../images/mobile-bg.jpg");
     padding-top: 0;
@@ -229,7 +230,7 @@ span.bold {
 }
 
 .title-section h1 {
-  margin:0;
+  margin: 0;
 }
 
 .title-section .center {
@@ -243,13 +244,13 @@ span.bold {
 
 /* --About Carousel-Section-- */
 svg.mask {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    z-index: 999;
-    stroke: #bae1fc;
-    fill: #bae1fc;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  stroke: #bae1fc;
+  fill: #bae1fc;
 }
 
 .about {
@@ -269,7 +270,7 @@ svg.mask {
   text-align: center;
   line-height: 1.3;
   font-size: 1.8rem;
-  font-family: 'Raleway 500', sans-serif;
+  font-family: "Raleway 500", sans-serif;
 }
 /* -----About Cooking School Page------ */
 
@@ -279,9 +280,9 @@ svg.mask {
   margin-top: 20vh;
   width: auto;
   position: absolute;
-  left:10px;
-  right:10px;
-  bottom:10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
   background-color: rgba(255, 255, 255, 0.7);
 }
 
@@ -353,9 +354,9 @@ svg.mask {
 
 /* --Cooking Class-Price Section--*/
 
-.aboutgarden {
-  background-image: ;
-}
+// .aboutgarden {
+//   background-image: ;
+// }
 
 /* --Cooking Class-Benefits Section--*/
 .aboutus {
@@ -408,55 +409,59 @@ svg.mask {
 
 /* --Book Now Page */
 .tall {
-    min-height: 80vh;
-    padding: 5%;
-    padding-top: 130px;
+  min-height: 80vh;
+  padding: 5%;
+  padding-top: 130px;
 }
 
 /* Style inputs with type="text", select elements and textareas */
-input[type=text], input[type=number], input[type=email], select, textarea {
-    width: 100%; /* Full width */
-    padding: 12px; /* Some padding */
-    border: 1px solid #ccc; /* Gray border */
-    border-radius: 4px; /* Rounded borders */
-    box-sizing: border-box; /* Make sure that padding and width stays in place */
-    margin-top: 6px; /* Add a top margin */
-    margin-bottom: 16px; /* Bottom margin */
-    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+input[type="text"],
+input[type="number"],
+input[type="email"],
+select,
+textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
 }
 
 /* Style the submit button with a specific background color etc */
-input[type=submit] {
-    background-color: #4CAF50;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+input[type="submit"] {
+  background-color: #4caf50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
 /* When moving the mouse over the submit button, add a darker green color */
-input[type=submit]:hover {
-    background-color: #45a049;
+input[type="submit"]:hover {
+  background-color: #45a049;
 }
 
 /* Add a background color and some padding around the form */
 .form-container {
-    border-radius: 4px;
-    background-color: white;
-    padding: 5%;
-    margin-top: 0;
-    margin-bottom: 5%;
+  border-radius: 4px;
+  background-color: white;
+  padding: 5%;
+  margin-top: 0;
+  margin-bottom: 5%;
 }
 
 /*---Tablet Styles----*/
 
-@media screen and (max-width:800px) {
+@media screen and (max-width: 800px) {
   .mobile-show {
     display: inline-block;
   }
 
-  .homeabout{
+  .homeabout {
     min-height: 69vw;
   }
 
@@ -465,12 +470,12 @@ input[type=submit]:hover {
   }
 
   header nav {
-    text-align:center;
+    text-align: center;
     width: 100%;
   }
 
   header img {
-    text-align:center;
+    text-align: center;
   }
 
   .intro {
@@ -484,16 +489,15 @@ input[type=submit]:hover {
   }
 
   .row .half-width.left {
-    width: 100%
+    width: 100%;
   }
-
 }
 
 /*----- TripAdvisor section ----------*/
 
 .tripadvisor-section .blurb-container li {
   font-size: 2rem;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   list-style: square inside;
   text-align: left;
   display: inline-block;
@@ -508,7 +512,6 @@ input[type=submit]:hover {
   margin-top: 0;
   padding: 5% 0;
 }
-
 
 .tripadvisor-section .tripadvisor-profile {
   font-size: 1.5rem;
@@ -528,12 +531,12 @@ input[type=submit]:hover {
 
 .tripadvisor-branding .rating {
   margin-bottom: 15px;
-  font-family: 'Lora', sans-serif;
+  font-family: "Lora", sans-serif;
   font-weight: 400;
 }
 
 .tripadvisor-branding:hover .title h3 {
-  color: #0091BD;
+  color: #0091bd;
 }
 
 #tripadvisor-carousel {
@@ -542,10 +545,10 @@ input[type=submit]:hover {
 
 .tripadvisor-profile {
   text-align: right;
-  padding-right: 30px
+  padding-right: 30px;
 }
 
-@media screen and (max-width:800px) {
+@media screen and (max-width: 800px) {
   .tripadvisor-profile {
     margin-top: 5%;
     text-align: center;
@@ -553,7 +556,7 @@ input[type=submit]:hover {
 }
 
 .tripadvisor-review {
-  font-family: 'Lora', sans-serif;
+  font-family: "Lora", sans-serif;
 }
 
 .tripadvisor-review .profile-photo img {
@@ -619,10 +622,10 @@ footer .facebook:hover {
 
 /*--- Small Tablet or Large Phone Styles----*/
 
-@media screen and (max-width:650px) {
+@media screen and (max-width: 650px) {
 }
 
 /*--- Phone Styles ----*/
 
-@media screen and (max-width:450px){
+@media screen and (max-width: 450px) {
 }
