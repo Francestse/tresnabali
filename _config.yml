@@ -33,3 +33,5 @@ exclude:
   - Gemfile.lock
 collections:
   - reviews
+sass:
+  sass_dir: _sass

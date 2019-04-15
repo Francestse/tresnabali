@@ -1,6 +1,8 @@
 ---
 ---
 
+@import "variables";
+
 /* ----- Universal Style ----- */
 body {
   font-family: "Lato", serif;
@@ -22,7 +24,7 @@ a {
 }
 
 a.button.button-primary {
-  background-color: #970238;
+  background-color: $mainColor;
   font-size: 1.3rem;
   border: none;
   margin-bottom: 0;
@@ -46,7 +48,7 @@ img {
 
 footer {
   background-image: url(../images/dark_embroidery.png);
-  color: white;
+  color: $white;
 }
 
 .mapouter {
