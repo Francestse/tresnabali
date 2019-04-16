@@ -28,6 +28,7 @@ a {
   }
 }
 
+button,
 a.button {
   padding: $buttonPadding;
   border: none;
@@ -294,16 +295,16 @@ svg.mask {
   padding: 20vh 4% 5vh;
 }
 
-/* --Contact Page-- */
-.contact-page {
-  padding: 10%;
-}
-
-/* --Book Now Page */
-.tall {
-  min-height: 80vh;
-  padding: 5%;
-  padding-top: 130px;
+// Book Now post
+section#book-now {
+  padding: 150px 30px 30px 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .wrapper {
+    width: 100%;
+    max-width: 980px;
+  }
 }
 
 /* Style inputs with type="text", select elements and textareas */

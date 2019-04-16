@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  <title>Book Now| Tresna Bali Cooking School</title>
+  <title>Book Now | Tresna Bali Cooking School</title>
   <!-- Meta Data -->
   <meta charset="utf-8" />
   <meta name="description" content="Book your place with us now" />
@@ -44,12 +44,14 @@
   </a>
   <nav class="mobile-hide">
   <ul>
-    <li><a href="/our-school">Our School</a></li>
-    <li><a href="/our-classes">Our Classes</a></li>
-    <li><a href="/private-kitchen">Private Kitchen</a></li>
+    <!--
+      <li><a href="/our-school">Our School</a></li>
+      <li><a href="/our-classes">Our Classes</a></li>
+      <li><a href="/private-kitchen">Private Kitchen</a></li>
+    -->
     <!-- <li><a href="/food-tales">Food Tales</a></li> -->
-    <li><a href="/contact">Contact</a></li>
-    <li><a class="button primary" href="/booknow">Book Now</a></li>
+    <!-- <li><a href="/contact">Contact</a></li> -->
+    <li><a class="button primary" href="/book-now">Book Now</a></li>
   </ul>
 </nav>
 
@@ -58,21 +60,29 @@
     <!-- end header-section -->
     <!-- Book now -->
 
-<!-- Class-Above-the fold section-->
-<section class="cooking-class banner-no-image grid-center">
-  <div class="form-container col-6_sm-12">
-    <h3>Book now</h3>
-      <form method="POST" action="https://formspree.io/Frances@tresnabali.com">
-        <input type="text" name="name" placeholder="Name">
-        <input type="text" name="country" placeholder="Country">
-        <input type="email" name="email" placeholder="Email">
-        <input type="number" placeholder="Phone number">
-        <input type="text" name="date" placeholder="Date of class preferred">
-        <textarea name="hotel" placeholder="Hotel name and address (if known)"></textarea>
-        <button type="submit">Send</button>
-      </form>
-    </div>
-
+<!-- Class-Above-the fold section -->
+<section id="book-now">
+  <div class="wrapper">
+    <h1>Ready to experience Authentic Balinese Cuisine?</h1>
+    <form action="https://formspree.io/Frances@taksubali.com" method="POST">
+      <label for="name">Name</label>
+      <input type="text" name="name" placeholder="Name" />
+      <label for="country">Country</label>
+      <input type="text" name="country" placeholder="Country" />
+      <label for="email">Email</label>
+      <input type="email" name="email" placeholder="Email" />
+      <label for="number">Phone Number</label>
+      <input type="number" placeholder="Phone number" />
+      <label for="date">Date</label>
+      <input type="text" name="date" placeholder="Date of class preferred" />
+      <label for="hotel">Accommodation in Bali</label>
+      <textarea
+        name="hotel"
+        placeholder="Hotel name and address (if known)"
+      ></textarea>
+      <button type="submit" class="primary">Complete Booking Request</button>
+    </form>
+  </div>
 </section>
  <!-- Google Map Embed -->
 <div class="google-maps">
