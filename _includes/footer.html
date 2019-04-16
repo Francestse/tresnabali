@@ -1,64 +1,54 @@
 <!-- Footer Section (needs to parallax up) -->
 <footer>
-  <div class="grid">
-    <!--
-      <div class="col-5_sm-12">
-        <h5>Our Food Tales</h5>
-        <ul>
-          {% for post in site.posts limit:3 %}
-            <li class="block">
-              <a href="{{post.url}}">{{post.title}}</a>
-            </li>
-          {% endfor %}
-        </ul>
-      </div>
-    -->
-
-    <!-- <div class="col-1_sm-12"></div> -->
-
-    <div class="col-6_sm-12">
-      <h5>Contact us</h5>
+  <section id="footer" class="flex-container">
+    <div id="contact" class="column description">
+      <h3>Contact us</h3>
       <ul>
-        <li class="block">
+        <li>
           <a href="tel:+628123963033">
             <i class="fa fa-phone-square" aria-hidden="true"></i>
             +62.81.2396.3033
           </a>
         </li>
 
-        <li class="block">
+        <li>
           <a href="mailto:frances@tresnabali.com">
             <i class="fa fa-envelope" aria-hidden="true"></i>
             frances@tresnabali.com
           </a>
         </li>
 
-        <li class="block">
+        <li>
           <i class="fa fa-map-marker" aria-hidden="true"></i> Gang Tresna, Jalan
           Raya Goa Gajah, Banjar Lebah, Bedulu, <br />Ubud, Bali, Indonesia
         </li>
       </ul>
     </div>
 
-    <div class="col center">
-      <a
-        class="facebook"
-        href="https://www.facebook.com/tresnabalicookingschool/?hc_ref=SEARCH&fref=nf"
-        ><i
-          class="fa fa-facebook-official"
-          aria-hidden="true"
-          target="_blank"
-        ></i>
-        Facebook</a
-      >
-      |
-      <a
-        class="instagram"
-        href="https://www.instagram.com/tresnabalicookingschool/"
-        ><i class="fa fa-instagram" aria-hidden="true" target="_blank"></i>
-        Instagram</a
-      >
-      | &copy; 2018 Tresna Bali
+    <div id="social" class="column description">
+      <ul>
+        <li>
+          <a
+            class="facebook"
+            href="https://www.facebook.com/tresnabalicookingschool/?hc_ref=SEARCH&fref=nf"
+            ><i
+              class="fa fa-facebook-official"
+              aria-hidden="true"
+              target="_blank"
+            ></i
+            >Like us on Facebook</a
+          >
+        </li>
+        <li>
+          <a
+            class="instagram"
+            href="https://www.instagram.com/tresnabalicookingschool/"
+            ><i class="fa fa-instagram" aria-hidden="true" target="_blank"></i
+            >Follow us on Instagram</a
+          >
+        </li>
+        <li>&copy; 2018 Tresna Bali</li>
+      </ul>
     </div>
-  </div>
+  </section>
 </footer>

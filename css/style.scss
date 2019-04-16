@@ -6,6 +6,8 @@
 // General Styles
 body {
   font-family: $bodyFont;
+  line-height: $bodyLineHeight;
+  color: $black;
 }
 
 h1,
@@ -14,57 +16,66 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Karma", sans-serif;
+  font-family: $headerFont;
 }
 
 a {
   text-decoration: none;
   color: inherit;
+  transition: $transition;
+  &:hover {
+    color: $mainColor;
+  }
 }
 
-a.button.button-primary {
-  background-color: $mainColor;
-  font-size: 1.3rem;
+a.button {
+  padding: $buttonPadding;
   border: none;
-  margin-bottom: 0;
-}
-
-a.button.button-primary:hover {
-  background-color: #334d69;
+  border-radius: $buttonBorderRadius;
+  transition: $transition;
+  &.primary {
+    background-color: $mainColor;
+    color: $white;
+    &:hover {
+      background-color: $primaryHover;
+    }
+  }
 }
 
 p {
   font-size: $bodyFontSize;
 }
 
-.center {
-  text-align: center;
-}
-
 img {
   max-width: 100%;
 }
 
+section {
+  margin-bottom: 2px;
+  &:nth-child {
+    margin-bottom: 0;
+  }
+}
 footer {
   background-image: url(../images/dark_embroidery.png);
   color: $white;
-}
-
-.mapouter {
-  margin: 20px 0 40px;
-}
-
-.rel,
-section {
-  position: relative;
-}
-
-.blurb {
-  padding: 5%;
-}
-
-.space {
-  padding: 1%;
+  section#footer {
+    flex-direction: row;
+    .column#contact,
+    .column#social {
+      align-items: flex-start;
+      ul {
+        padding: 0;
+        li {
+          list-style: none;
+          margin-bottom: 15px;
+          .fa {
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+  }
 }
 
 .back-img {
@@ -72,7 +83,7 @@ section {
   background-repeat: no-repeat;
   background-position: center;
   min-height: 25vh;
-  background-color: rgb(220, 220, 220);
+  background-color: $white;
 }
 
 .banner {
@@ -82,15 +93,10 @@ section {
 
 .banner-no-image {
   min-height: 100vh;
-  padding-top: 20vh;
 }
 
 .mobile-show {
   display: none;
-}
-
-.block {
-  display: block;
 }
 
 .block .fa {
@@ -99,78 +105,42 @@ section {
 
 /* ------ Header Section ------ */
 header {
-  clear: both;
   position: fixed;
   width: 100%;
   top: 0;
-  z-index: 99999;
-  transition: 1s;
-}
-
-header li {
-  list-style: none;
-  line-height: 1.2;
-  text-align: center;
-  vertical-align: middle;
-  display: inline-block;
-  margin: 0 4px;
-}
-
-.active {
-  background-color: white;
-  transition: 0.5s;
-}
-
-.light-bg {
-  background-color: rgba(255, 255, 255, 0.7);
-}
-
-.light-bg.active {
-  background-color: rgba(255, 255, 255, 1);
-}
-
-header {
-  padding: 1% 2%;
-}
-
-header .logo {
-  max-width: 25%;
-  max-height: 70px;
-}
-
-@media screen and (max-width: 800px) {
-  header .logo {
-    max-width: 50%;
+  left: 0;
+  z-index: $navIndex;
+  background-color: $navInactiveColor;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: $navPadding;
+  box-shadow: $navDropshadow;
+  transition: $transition;
+  &.active {
+    background-color: $navActiveColor;
   }
 }
 
 nav {
-  display: inline-block;
-  width: 70%;
-  text-align: right;
-  /* vertical-align: bottom; */
-  position: fixed;
-  right: 2%;
+  ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    li {
+      list-style: none;
+      text-transform: $navLinkCase;
+      font-size: $navLinkSize;
+      font-weight: $navLinkWeight;
+      letter-spacing: $navLinkLetterSpacing;
+      margin-left: $navLinkMarginLeft;
+    }
+  }
 }
 
-nav a {
-  padding: 9px 12px;
-}
-
-nav ul {
-  margin: 20px 0;
-}
-
-nav li a.nav-stacked:hover {
-  background-color: #334d69;
-  color: white;
-  border-radius: 4px;
-}
-
-/* I am targetting the a links inside the nav */
-
-.nav-stacked {
-  display: inline-block;
+.logo {
+  height: 80px;
 }
 
 .dropdown-nav {
@@ -188,34 +158,73 @@ nav li a.nav-stacked:hover {
   display: block;
 }
 
-span.bold {
-  font-weight: bold;
+section#landing-banner {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+    url("../../images/home-organic-garden-tresna-bali-cooking-school.jpg");
+  background-size: cover;
+  background-position: center;
 }
 
-/* -----Home Page------ */
+.banner-intro {
+  text-align: center;
+  color: $white;
+  h2 {
+    font-family: "Lato", serif;
+    font-size: 3.2rem;
+  }
 
-/* --Home-Above-the-fold-- */
-.home-banner {
-  background-image: url("../images/home-organic-garden-tresna-bali-cooking-school.jpg");
-  max-height: 99vh;
-  padding-top: 15vh;
+  hr {
+    border-top: 2px solid $white;
+    width: 25%;
+    max-width: 100px;
+    min-width: 50px;
+  }
 }
 
-.home-banner h1 {
-  text-shadow: 2px 2px rgba(0, 0, 0, 0.5);
+section.flex-container {
+  display: flex;
+  .column {
+    width: 50%;
+  }
 }
 
-.home-banner h2 {
-  font-family: "Lato", serif;
-  font-size: 3.2rem;
-  text-shadow: 2px 2px rgba(0, 0, 0, 0.5);
+section#why-tresna {
+  flex-direction: row;
 }
 
-.home-banner hr {
-  margin: 1.5rem auto 2rem;
-  width: 8vw;
-  border-top: 2px solid white;
-  text-shadow: 2px 2px rgba(0, 0, 0, 0.5);
+section#our-cooking-class {
+  flex-direction: row-reverse;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  &.description {
+    padding: 30px;
+  }
+}
+
+// Google Maps Styling
+.google-maps {
+  position: relative;
+  padding-bottom: 500px;
+  height: 0;
+  overflow: hidden;
+}
+.google-maps iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
 }
 
 @media screen and (max-width: 800px) {
@@ -224,15 +233,6 @@ span.bold {
     padding-top: 0;
     max-height: 90vh;
   }
-}
-
-.title-section h1 {
-  margin: 0;
-}
-
-.title-section .center {
-  padding: 30vh 5%;
-  color: white;
 }
 
 .class-section {
@@ -258,132 +258,27 @@ svg.mask {
 
 .owl-dots {
   position: absolute;
-  right: 10px;
-  bottom: 10px;
+  right: 15px;
+  bottom: 15px;
 }
 
-.carousel-section ul {
-  list-style: none;
-  text-align: center;
-  line-height: 1.3;
-  font-size: 1.8rem;
-  font-family: "Raleway 500", sans-serif;
-}
-/* -----About Cooking School Page------ */
-
-/* --Cooking-Above-the-fold-- */
-.cooking-school .intro {
-  padding: 1% 3%;
-  margin-top: 20vh;
-  width: auto;
-  position: absolute;
-  left: 10px;
-  right: 10px;
-  bottom: 10px;
-  background-color: rgba(255, 255, 255, 0.7);
-}
-
-.intro p {
-  text-align: justify;
-  line-height: 1.2;
-}
-
-.intro h3 {
-  margin: 0;
-}
-
-/* --Cooking School-About Food Section--*/
-.about-food .owl-carousel {
-  padding: 5%;
-}
-
-.about-food .blurb {
-  padding: 10% 5% 5% 10%;
-}
-
-/* --Cooking School-About Location Section--*/
-
-/*.aboutgarden {
-  background-image: url("../images/aboutgarden.jpg");
-}
-
-/* --Cooking School-About Us Section--*/
-
-/*.aboutus {
-  background-image: url("../images/aboutus.jpg");
-}
-
-/* -----About Cooking Class Page------ */
-
-/* --Cooking-Class-Above-the-fold-- */
-
-.cooking-class .row .intro {
-  padding: 1% 3%;
-}
-
-.cooking-class .intro p {
-  text-align: justify;
-}
-
-.cooking-class .intro h3 {
-  margin: 0;
-}
-
-.cooking-class .row .intro {
-  width: 46%;
-  float: right;
-  background-color: rgba(255, 255, 255, 0.7);
-}
+// .carousel-section ul {
+//   list-style: none;
+//   text-align: center;
+//   line-height: 1.3;
+//   font-size: 1.8rem;
+//   font-family: "Raleway 500", sans-serif;
+// }
 
 /* --Cooking Class-Menu Section--*/
 .aboutfood {
   background-image: url("../images/aboutfood.jpg");
 }
 
-/*.row .half-width a {
-  text-decoration: none;
-}
-
-.row .half-width a:hover {
-  background-color: #7D6D61;
-  border-radius: 10%;
-}*/
-
-/* --Cooking Class-Price Section--*/
-
-// .aboutgarden {
-//   background-image: ;
-// }
-
 /* --Cooking Class-Benefits Section--*/
 .aboutus {
   background-image: url("../images/aboutus.jpg");
 }
-
-/* -----Private Kitchen Page------ */
-
-/* --Private-Kitchen-Above-the-fold-- */
-.private-kitchen .row .intro {
-  padding: 1% 3%;
-}
-
-.intro p {
-  text-align: justify;
-}
-
-.intro h3 {
-  margin: 0;
-}
-
-.row .intro {
-  width: 46%;
-  float: left;
-  background-color: rgba(255, 255, 255, 0.7);
-}
-
-/* -- Private-Kitchen-Menu Section--*/
-
-/* -- Private-Kitchen-Price Section--*/
 
 /* Blog Styles */
 .post-page {
@@ -419,7 +314,7 @@ select,
 textarea {
   width: 100%; /* Full width */
   padding: 12px; /* Some padding */
-  border: 1px solid #ccc; /* Gray border */
+  border: 1px solid $black;
   border-radius: 4px; /* Rounded borders */
   box-sizing: border-box; /* Make sure that padding and width stays in place */
   margin-top: 6px; /* Add a top margin */
@@ -429,17 +324,15 @@ textarea {
 
 /* Style the submit button with a specific background color etc */
 input[type="submit"] {
-  background-color: #4caf50;
-  color: white;
+  background-color: $mainColor;
+  color: $white;
   padding: 12px 20px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
-}
-
-/* When moving the mouse over the submit button, add a darker green color */
-input[type="submit"]:hover {
-  background-color: #45a049;
+  &:hover {
+    background-color: $primaryHover;
+  }
 }
 
 /* Add a background color and some padding around the form */
@@ -473,10 +366,6 @@ input[type="submit"]:hover {
 
   header img {
     text-align: center;
-  }
-
-  .intro {
-    min-height: 50vh;
   }
 
   /* Collapse columns */

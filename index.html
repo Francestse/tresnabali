@@ -3,7 +3,6 @@ layout: default
 title: Tresna Bali Cooking School
 description: "Learn authentic Balinese recipes at our Ubud, Bali Cooking Class."
 author: Frances Tse Ardika
-headerType: light-bg
 banner_image_path: /images/home-organic-garden-tresna-bali-cooking-school.jpg
 bodyId: landing-page
 ---
@@ -12,67 +11,38 @@ bodyId: landing-page
   ASK TINA <meta name="p:domain_verify" content="91ff3e50a44ab985e749a312fcb4d9a2"/
 -->
 
-<!-- Home-Above-the-fold-section -->
-<section class="title-section home-banner banner">
-  <div class="center">
-    <h1 class="editable">Tresna Bali Cooking School</h1>
+<!-- Landing Page Banner (Above Fold) -->
+<section id="landing-banner" class="banner">
+  <div class="banner-intro">
+    <h1>Tresna Bali Cooking School</h1>
     <hr />
-    <h2 class="editable">We're crazy, culinary cooks at heart</h2>
-    <a class="mobile-show button button-primary" href="/booknow">Book Now</a>
-  </div>
-  <!--
-    <svg class="mask bottom" viewBox="0 0 1200 100" enable-background="new 0 0 1200 100" xml:space="preserve">
-        <polygon class="bottom" points="0,100 600,10 1200,100"></polygon>
-    </svg>
-  -->
-</section>
-<!-- end title-section -->
-
-<!-- About and Carousel section -->
-<section class="carousel-section about grid-center">
-  <!--
-    Carousel of 4 Images - Kitchen, Frances-Garden, Balinese Feast, Outdoor Kitchen
-  -->
-  <div class="col-6_sm-12">
-    <div class="blurb editable">
-      <h3 class="center">Why Tresna Bali?</h3>
-      <p>
-        With us, you won't just see the place we love, you'll barrel into it -
-        into our traditions, our riverside garden, our kitchens and our Balinese
-        way of life - taking your own special place around our welcoming table.
-      </p>
-      <p>
-        Sure, you'll learn our coveted recipes and fill your stomach to beyond
-        full, but you'll go deeper: learning about local Balinese culture, pick
-        your own organic ingredients and get to the heart of cooking,
-        experiencing each intriguing element of everything you'll put in your
-        mouth.
-      </p>
-    </div>
+    <h2>We're crazy, culinary cooks at heart.</h2>
+    <a class="mobile-show button primary" href="/booknow">Book Now</a>
   </div>
 </section>
-<!-- end About-section -->
 
-<!-- class-section -->
-<section class="class-section grid-noGutter-equalHeight_sm-1">
-  <div class="col-6_sm-12">
-    <div class="blurb center">
-      <h3>Our Cooking Classes</h3>
-      <ul>
-        <li>Farm to Table Menu of Authentic Balinese Dishes</li>
-        <li>Feast on Organic Ingredients You Pick Yourself</li>
-        <li>Individual Modern Cooking Stations</li>
-        <li>Intimate Hands-On Classes - Maximum of 10 Cooks</li>
-        <li>Riverside Organic Garden with Traditional Outdoor Kitchen</li>
-        <li>Complimentary transfers from Central Ubud - 7 minutes away</li>
-      </ul>
-      <div><a class="button button-primary" href="/booknow">Book Now</a></div>
-    </div>
+<!-- Why Tresna Bali? -->
+<section id="why-tresna" class="flex-container">
+  <div class="column description">
+    <h3>Why Tresna Bali?</h3>
+    <p>
+      With us, you won't just see the place we love, you'll barrel into it -
+      into our traditions, our riverside garden, our kitchens and our Balinese
+      way of life - taking your own special place around our welcoming table.
+    </p>
+    <p>
+      Sure, you'll learn our coveted recipes and fill your stomach to beyond
+      full, but you'll go deeper: learning about local Balinese culture, pick
+      your own organic ingredients and get to the heart of cooking, experiencing
+      each intriguing element of everything you'll put in your mouth.
+    </p>
   </div>
-
-  <!-- Second Carousel of 4 images -->
-  <div class="col-6_sm-12">
+  <div class="column">
     <div class="owl-carousel owl-theme" id="cooking-school-pic-carousel">
+      <img
+        src="/images/home-nasi-campur-tresna-bali-cooking-school.jpg"
+        alt="The best nasi campur in Bali"
+      />
       <img
         src="/images/home-ryan-katie-pick-your-own-tresna-bali-cooking-school.jpg"
         alt="Pick your own herbs and ingredients from our organic garden"
@@ -85,12 +55,25 @@ bodyId: landing-page
         src="/images/home-balinese-pork-satay-tresna-bali-cooking-school.jpg"
         alt="Authentic Balinese Pork Satay grilled over coconut husks"
       />
-      <!--
-        thoughts for future photo - Individual cooking stations for each student with clean equipment for each dish"
-      -->
-      <!--
-        <img src="/images/home-nasi-campur-tresna-bali-cooking-school.jpg" alt="The best nasi campur in Bali" />
-      -->
+    </div>
+  </div>
+</section>
+
+<!-- Our Cooking Classes -->
+<section id="our-cooking-class" class="flex-container">
+  <div class="column description">
+    <h3>Our Cooking Classes</h3>
+    <ul>
+      <li>Farm to Table Menu of Authentic Balinese Dishes</li>
+      <li>Feast on Organic Ingredients You Pick Yourself</li>
+      <li>Individual Modern Cooking Stations</li>
+      <li>Intimate Hands-On Classes - Maximum of 10 Cooks</li>
+      <li>Riverside Organic Garden with Traditional Outdoor Kitchen</li>
+      <li>Complimentary transfers from Central Ubud - 7 minutes away</li>
+    </ul>
+  </div>
+  <div class="column">
+    <div class="owl-carousel owl-theme" id="cooking-school-pic-carousel">
       <img
         src="/images/home-kitchen-tresna-bali-cooking-school.jpg"
         alt="Best Balinese Cooking Class - Masterchef Modern Kitchen and Cooking Stations"
@@ -103,14 +86,6 @@ bodyId: landing-page
         src="/images/home-balinese-feast-tresna-bali-cooking-school.jpg"
         alt="Balinese Cooking Class - 8-course Balinese Feast"
       />
-      <img
-        src="/images/home-outdoor-kitchen-tresna-bali-cooking-school.jpg"
-        alt="Outdoor Kitchen - Traditional Balinese Kitchen, Mortar and Pestle"
-      />
     </div>
   </div>
-  <!--
-    4 Images - Ryan & Katie Garden, Gina Outdoor Kitchen, Pork Satay, Nasi Campur
-  -->
 </section>
-<!-- end class-section -->
