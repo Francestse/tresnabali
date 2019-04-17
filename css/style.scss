@@ -159,17 +159,26 @@ nav {
   display: block;
 }
 
-section#landing-banner {
+section.banner {
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 30px;
-  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
-    url("../../images/home-organic-garden-tresna-bali-cooking-school.jpg");
-  background-size: cover;
-  background-position: center;
+
+  &#landing-banner {
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+      url("../../images/home-organic-garden-tresna-bali-cooking-school.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+  &#retreat-banner {
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+      url("https://picsum.photos/1920/700/?random");
+    background-size: cover;
+    background-position: center;
+  }
 }
 
 .banner-intro {
@@ -190,26 +199,36 @@ section#landing-banner {
 
 section.flex-container {
   display: flex;
+  flex-direction: row;
   .column {
     width: 50%;
   }
-}
-
-section#why-tresna {
-  flex-direction: row;
-}
-
-section#our-cooking-class {
-  flex-direction: row-reverse;
+  &.reversed {
+    flex-direction: row-reverse;
+  }
 }
 
 .column {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  &.image {
+    background-color: $black;
+  }
   &.description {
-    padding: 30px;
+    ul {
+      padding-left: 18px;
+    }
+    @media screen and (min-width: $desktop) {
+      padding: 80px;
+    }
+    @media screen and (min-width: $tablet) and (max-width: $desktop) {
+      padding: 40px;
+    }
+    @media screen and (min-width: $mobile) and (max-width: $tablet) {
+      padding: 20px;
+    }
   }
 }
 
@@ -342,20 +361,22 @@ section#book-now {
     color: $mainColor;
   }
 
-  form input[type="date"] {
-    display: inline-block;
-    width: 100%;
-    border: 1px solid $black;
-    border-radius: $buttonBorderRadius;
-    padding: 12px;
-    margin: 6px 0 16px;
-    resize: none;
-  }
+  form {
+    input[type="date"] {
+      display: inline-block;
+      width: 100%;
+      border: 1px solid $black;
+      border-radius: $buttonBorderRadius;
+      padding: 12px;
+      margin: 6px 0 16px;
+      resize: none;
+    }
 
-  form textarea {
-    min-height: 150px;
-    max-height: 300px;
-    resize: vertical;
+    textarea {
+      min-height: 150px;
+      max-height: 300px;
+      resize: vertical;
+    }
   }
 }
 
