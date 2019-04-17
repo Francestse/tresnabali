@@ -336,13 +336,27 @@ input[type="submit"] {
   }
 }
 
-/* Add a background color and some padding around the form */
-.form-container {
-  border-radius: 4px;
-  background-color: white;
-  padding: 5%;
-  margin-top: 0;
-  margin-bottom: 5%;
+section#book-now {
+  span.required {
+    font-weight: 700;
+    color: $mainColor;
+  }
+
+  form input[type="date"] {
+    display: inline-block;
+    width: 100%;
+    border: 1px solid $black;
+    border-radius: $buttonBorderRadius;
+    padding: 12px;
+    margin: 6px 0 16px;
+    resize: none;
+  }
+
+  form textarea {
+    min-height: 150px;
+    max-height: 300px;
+    resize: vertical;
+  }
 }
 
 /*---Tablet Styles----*/

@@ -25,3 +25,5 @@ $(document).ready(function() {
     nav: false
   });
 });
+
+document.getElementById("datePicker").valueAsDate = new Date();
