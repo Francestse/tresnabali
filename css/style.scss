@@ -25,10 +25,9 @@ h2 {
 
 a {
   text-decoration: none;
-  color: inherit;
-  transition: $transition;
+  color: $mainColor;
   &:hover {
-    color: $mainColor;
+    text-decoration: underline;
   }
 }
 
@@ -141,12 +140,24 @@ nav {
       font-weight: $navLinkWeight;
       letter-spacing: $navLinkLetterSpacing;
       margin-left: $navLinkMarginLeft;
+      a {
+        text-decoration: none;
+        color: $black;
+        transition: $transition;
+        &:hover {
+          color: $mainColor;
+        }
+      }
     }
   }
 }
 
 .logo {
-  height: 80px;
+  height: 50px;
+  width: inherit;
+  @media screen and (min-width: $mobile) and (max-width: $tablet) {
+    height: 30px;
+  }
 }
 
 .dropdown-nav {
@@ -174,19 +185,21 @@ section.banner {
 
   &#landing-banner {
     background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-      url("../../images/tresna-garden-1.jpg");
+      url("../images/tresna-garden-1.jpg");
     background-size: cover;
     background-position: center;
   }
   &#retreat-banner {
     background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-      url("https://picsum.photos/1920/700/?random");
+      url("../images/mount-agung.jpg");
     background-size: cover;
     background-position: center;
   }
 }
 
 .banner-intro {
+  width: 100%;
+  max-width: 1080px;
   text-align: center;
   color: $white;
   h1 {
@@ -301,15 +314,15 @@ div#retreat-image-3 {
 }
 
 div#retreat-image-1 {
-  background-image: url("https://picsum.photos/1000/1000/?random");
+  background-image: url("../images/frances-1.jpg");
 }
 
 div#retreat-image-2 {
-  background-image: url("https://picsum.photos/1000/1000/?random");
+  background-image: url("../images/offerings-3.jpg");
 }
 
 div#retreat-image-3 {
-  background-image: url("https://picsum.photos/1000/1000/?random");
+  background-image: url("../images/god-barong-2.jpg");
 }
 
 // Google Maps Styling
@@ -327,34 +340,11 @@ div#retreat-image-3 {
   height: 100% !important;
 }
 
-@media screen and (max-width: 800px) {
-  .home-banner {
-    background-image: url("../images/mobile-bg.jpg");
-    padding-top: 0;
-    max-height: 90vh;
-  }
-}
-
-.class-section {
-  background-color: #f2f2f2;
-}
-
-/* --About Carousel-Section-- */
-svg.mask {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  z-index: 999;
-  stroke: #bae1fc;
-  fill: #bae1fc;
-}
-
 .about {
   background: #bae1fc;
 }
 
-/* --Carousel-- */
+// Owl Carousel Styling
 
 .owl-dots {
   position: absolute;
@@ -362,39 +352,7 @@ svg.mask {
   bottom: 15px;
 }
 
-// .carousel-section ul {
-//   list-style: none;
-//   text-align: center;
-//   line-height: 1.3;
-//   font-size: 1.8rem;
-//   font-family: "Raleway 500", sans-serif;
-// }
-
-/* --Cooking Class-Menu Section--*/
-.aboutfood {
-  background-image: url("../images/aboutfood.jpg");
-}
-
-/* --Cooking Class-Benefits Section--*/
-.aboutus {
-  background-image: url("../images/aboutus.jpg");
-}
-
-/* Blog Styles */
-.post-page {
-  background-image: url("../images/dark-embroidery-pattern.png");
-  background-size: auto;
-  padding-top: 30vh;
-}
-
-.post-body {
-  background-image: url("../images/dark-embroidery-pattern.png");
-  background-size: auto;
-  min-height: 80vh;
-  padding: 20vh 4% 5vh;
-}
-
-// Book Now post
+// Book Now
 section#book-now {
   padding: 150px 30px 30px 30px;
   display: flex;
