@@ -19,7 +19,7 @@ h6 {
   font-family: $headerFont;
 }
 
-h3 {
+h2 {
   color: $mainColor;
 }
 
@@ -63,7 +63,7 @@ section {
   }
 }
 footer {
-  background-image: url(../images/dark_embroidery.png);
+  background-image: url(../images/dark-embroidery-pattern.png);
   color: $white;
   section#footer {
     flex-direction: row;
@@ -189,9 +189,15 @@ section.banner {
 .banner-intro {
   text-align: center;
   color: $white;
-  h2 {
-    font-family: "Lato", serif;
-    font-size: 3.2rem;
+  h1 {
+    font-family: $bodyFont;
+    font-size: 3.125rem;
+    @media screen and (min-width: $tablet) and (max-width: $desktop) {
+      font-size: 2.5rem;
+    }
+    @media screen and (min-width: $mobile) and (max-width: $tablet) {
+      font-size: 1.25rem;
+    }
   }
 
   hr {
@@ -279,7 +285,8 @@ section.flex-container {
 }
 
 div#retreat-image-1,
-div#retreat-image-2 {
+div#retreat-image-2,
+div#retreat-image-3 {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -298,6 +305,10 @@ div#retreat-image-1 {
 }
 
 div#retreat-image-2 {
+  background-image: url("https://picsum.photos/1000/1000/?random");
+}
+
+div#retreat-image-3 {
   background-image: url("https://picsum.photos/1000/1000/?random");
 }
 
@@ -371,13 +382,13 @@ svg.mask {
 
 /* Blog Styles */
 .post-page {
-  background-image: url("../images/dark_embroidery.png");
+  background-image: url("../images/dark-embroidery-pattern.png");
   background-size: auto;
   padding-top: 30vh;
 }
 
 .post-body {
-  background-image: url("../images/dark_embroidery.png");
+  background-image: url("../images/dark-embroidery-pattern.png");
   background-size: auto;
   min-height: 80vh;
   padding: 20vh 4% 5vh;
