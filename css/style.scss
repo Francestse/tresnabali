@@ -19,6 +19,10 @@ h6 {
   font-family: $headerFont;
 }
 
+h3 {
+  color: $mainColor;
+}
+
 a {
   text-decoration: none;
   color: inherit;
@@ -199,12 +203,49 @@ section.banner {
 
 section.flex-container {
   display: flex;
-  flex-direction: row;
-  .column {
-    width: 50%;
+  flex-direction: column-reverse;
+  @media screen and (min-width: $desktop) {
+    flex-direction: row;
+    &.reversed {
+      flex-direction: row-reverse;
+    }
   }
-  &.reversed {
-    flex-direction: row-reverse;
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    @media screen and (min-width: $desktop) {
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 80px;
+    }
+    @media screen and (min-width: $tablet) and (max-width: $desktop) {
+      padding: 40px;
+    }
+    @media screen and (min-width: $mobile) and (max-width: $tablet) {
+      padding: 20px;
+    }
+  }
+  .column {
+    width: 100%;
+    @media screen and (min-width: $desktop) {
+      width: 50%;
+    }
+    &.thirds {
+      justify-content: flex-start;
+      width: 100%;
+      padding: 0;
+      margin-bottom: 30px;
+      img {
+        margin-bottom: 30px;
+      }
+      @media screen and (min-width: $desktop) {
+        width: calc(100% / 3 - 20px);
+      }
+      @media screen and (min-width: $tablet) and (max-width: $desktop) {
+      }
+      @media screen and (min-width: $mobile) and (max-width: $tablet) {
+      }
+    }
   }
 }
 
@@ -230,6 +271,21 @@ section.flex-container {
       padding: 20px;
     }
   }
+}
+
+div#retreat-image-1,
+div#retreat-image-2 {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+div#retreat-image-1 {
+  background-image: url("https://picsum.photos/1000/1000/?random");
+}
+
+div#retreat-image-2 {
+  background-image: url("https://picsum.photos/1000/1000/?random");
 }
 
 // Google Maps Styling
