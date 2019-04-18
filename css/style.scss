@@ -391,7 +391,7 @@ section#book-now {
   align-items: center;
   .wrapper {
     width: 100%;
-    max-width: 980px;
+    max-width: 1080px;
   }
 }
 
@@ -439,6 +439,38 @@ section#book-now {
       padding: 12px;
       margin: 6px 0 16px;
       resize: none;
+    }
+
+    textarea {
+      min-height: 150px;
+      max-height: 300px;
+      resize: vertical;
+    }
+  }
+}
+section#retreat-booking-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .wrapper {
+    width: 100%;
+    max-width: 1080px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  span.required {
+    font-weight: 700;
+    color: $mainColor;
+  }
+
+  form {
+    select {
+      border: 1px solid $black;
+      border-radius: $buttonBorderRadius;
+      padding: 12px;
+      margin: 6px 0 16px;
+      height: 44px;
     }
 
     textarea {
