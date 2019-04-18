@@ -52,6 +52,7 @@ p {
 }
 
 img {
+  width: 100%;
   max-width: 100%;
 }
 
@@ -235,11 +236,15 @@ section.flex-container {
       width: 100%;
       padding: 0;
       margin-bottom: 30px;
+      &:last-child {
+        margin-bottom: 0;
+      }
       img {
         margin-bottom: 30px;
       }
       @media screen and (min-width: $desktop) {
         width: calc(100% / 3 - 20px);
+        margin-bottom: 0;
       }
       @media screen and (min-width: $tablet) and (max-width: $desktop) {
       }
@@ -278,6 +283,14 @@ div#retreat-image-2 {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  @media screen and (min-width: $tablet) and (max-width: $desktop) {
+    min-height: 500px;
+    padding: 40px;
+  }
+  @media screen and (min-width: $mobile) and (max-width: $tablet) {
+    min-height: 300px;
+    padding: 20px;
+  }
 }
 
 div#retreat-image-1 {
