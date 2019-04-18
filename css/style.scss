@@ -65,7 +65,7 @@ footer {
   background-image: url(../images/dark-embroidery-pattern.png);
   color: $white;
   section#footer {
-    flex-direction: row;
+    flex-direction: column;
     .column#contact,
     .column#social {
       align-items: flex-start;
@@ -74,11 +74,20 @@ footer {
         li {
           list-style: none;
           margin-bottom: 15px;
-          .fa {
-            margin-right: 10px;
+          &:last-child {
+            margin-bottom: 0;
+          }
+          a {
+            color: white;
+            i.fa {
+              margin-right: 10px;
+            }
           }
         }
       }
+    }
+    @media screen and (min-width: $desktop) {
+      flex-direction: row;
     }
   }
 }
@@ -155,9 +164,6 @@ nav {
 .logo {
   height: 50px;
   width: inherit;
-  @media screen and (min-width: $mobile) and (max-width: $tablet) {
-    height: 30px;
-  }
 }
 
 .dropdown-nav {
