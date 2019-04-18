@@ -1,0 +1,31 @@
+<!-- Retreat Booking Form -->
+<section id="retreat-booking-form" class="flex-container">
+  <div class="wrapper">
+    <h2>Ready to experience the <em>real</em> Bali?</h2>
+    <p><span class="required">*</span> Required Information.</p>
+    <form action="https://formspree.io/Frances@taksubali.com" method="POST">
+      <label for="name">Name <span class="required">*</span></label>
+      <input type="text" name="name" placeholder="Name" required />
+      <label for="country">Country</label>
+      <input type="text" name="country" placeholder="Country" />
+      <label for="email">Email <span class="required">*</span></label>
+      <input type="email" name="email" placeholder="Email" required />
+      <label for="number">Phone Number</label>
+      <input type="number" placeholder="Phone number" />
+      <label for="date">Date <span class="required">*</span></label>
+      <select name="date">
+        <option selected
+          >Sunday, October 27, 2019 - Friday, November 1, 2019</option
+        >
+        <option>Friday, November 1, 2019 - Wednesday, November 6, 2019</option>
+        <option>Monday, April 27, 2020 – Saturday, May 1, 2020</option>
+      </select>
+      <label for="comments">Comments</label>
+      <textarea
+        name="comments"
+        placeholder="What would you like to experience on this retreat?"
+      ></textarea>
+      <button type="submit" class="primary">Complete Booking Request</button>
+    </form>
+  </div>
+</section>

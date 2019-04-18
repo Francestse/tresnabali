@@ -1,0 +1,40 @@
+// Responsive
+$desktop: 1024px;
+$tablet: 768px;
+$mobile: 320px;
+
+// Colors
+$mainColor: #803642;
+$white: #fff;
+$black: #333;
+$lightGrey: #eee;
+
+// Typography
+$headerFont: "Karma";
+$bodyFont: "Lato";
+$bodyLineHeight: 1.6;
+
+// Root font-size is 16px
+$bodyFontSize: 1rem;
+
+// General Styling
+$transition: all 0.5s ease;
+
+// Navigation
+$navIndex: 9999;
+$navPadding: 15px 30px;
+$navActiveColor: #fff;
+$navInactiveColor: rgba(255, 255, 255, 0.8);
+$navDropshadow: rgb(90, 90, 90) 0px 1px 15px;
+
+// Link Styling
+$navLinkSize: 0.75rem;
+$navLinkCase: uppercase;
+$navLinkWeight: 700;
+$navLinkLetterSpacing: 1.5px;
+$navLinkMarginLeft: 30px;
+
+// Button Styling
+$buttonPadding: 15px;
+$buttonBorderRadius: 4px;
+$primaryHover: #3a0510;

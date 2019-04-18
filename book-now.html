@@ -1,0 +1,41 @@
+---
+layout: default
+title: Book Now | Tresna Bali Cooking School
+description: "Book your place with us now"
+author: Frances Tse Ardika
+headerType: light-bg
+---
+
+<!-- Book now -->
+
+<!-- Class-Above-the fold section -->
+<section id="book-now">
+  <div class="wrapper">
+    <h1>Ready to experience Authentic Balinese Cuisine?</h1>
+    <p><span class="required">*</span> Required Information.</p>
+    <form action="https://formspree.io/Frances@taksubali.com" method="POST">
+      <label for="name">Name <span class="required">*</span></label>
+      <input type="text" name="name" placeholder="Name" required />
+      <label for="country">Country</label>
+      <input type="text" name="country" placeholder="Country" />
+      <label for="email">Email <span class="required">*</span></label>
+      <input type="email" name="email" placeholder="Email" required />
+      <label for="number">Phone Number</label>
+      <input type="number" placeholder="Phone number" />
+      <label for="date">Date <span class="required">*</span></label>
+      <input
+        type="date"
+        name="date"
+        id="datePicker"
+        placeholder="Date of class preferred"
+        required
+      />
+      <label for="hotel">Accommodation in Bali</label>
+      <textarea
+        name="hotel"
+        placeholder="Hotel name and address (if known)"
+      ></textarea>
+      <button type="submit" class="primary">Complete Booking Request</button>
+    </form>
+  </div>
+</section>

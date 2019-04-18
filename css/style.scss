@@ -1,0 +1,592 @@
+---
+---
+
+@import "variables";
+
+// General Styles
+body {
+  font-family: $bodyFont;
+  line-height: $bodyLineHeight;
+  color: $black;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $headerFont;
+}
+
+h2 {
+  color: $mainColor;
+}
+
+a {
+  text-decoration: none;
+  color: $mainColor;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+button,
+a.button {
+  padding: $buttonPadding;
+  border: none;
+  border-radius: $buttonBorderRadius;
+  transition: $transition;
+  &.primary {
+    background-color: $mainColor;
+    color: $white;
+    &:hover {
+      background-color: $primaryHover;
+    }
+  }
+}
+
+p {
+  font-size: $bodyFontSize;
+}
+
+img {
+  width: 100%;
+  max-width: 100%;
+}
+
+section {
+  margin-bottom: 2px;
+  &:nth-child {
+    margin-bottom: 0;
+  }
+}
+footer {
+  background-image: url(../images/dark-embroidery-pattern.png);
+  color: $white;
+  section#footer {
+    flex-direction: column;
+    .column#contact,
+    .column#social {
+      align-items: flex-start;
+      ul {
+        padding: 0;
+        li {
+          list-style: none;
+          margin-bottom: 15px;
+          &:last-child {
+            margin-bottom: 0;
+          }
+          a {
+            color: white;
+            i.fa {
+              margin-right: 10px;
+            }
+          }
+        }
+      }
+    }
+    @media screen and (min-width: $desktop) {
+      flex-direction: row;
+    }
+  }
+}
+
+.back-img {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 25vh;
+  background-color: $white;
+}
+
+.banner {
+  background-size: cover;
+  background-position: center;
+}
+
+.banner-no-image {
+  min-height: 100vh;
+}
+
+.mobile-show {
+  display: none;
+}
+
+.block .fa {
+  margin-right: 5px;
+}
+
+/* ------ Header Section ------ */
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: $navIndex;
+  background-color: $navInactiveColor;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: $navPadding;
+  box-shadow: $navDropshadow;
+  transition: $transition;
+  &.active {
+    background-color: $navActiveColor;
+  }
+}
+
+nav {
+  ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    li {
+      list-style: none;
+      text-transform: $navLinkCase;
+      font-size: $navLinkSize;
+      font-weight: $navLinkWeight;
+      letter-spacing: $navLinkLetterSpacing;
+      margin-left: $navLinkMarginLeft;
+      a {
+        text-decoration: none;
+        color: $black;
+        transition: $transition;
+        &:hover {
+          color: $mainColor;
+        }
+      }
+    }
+  }
+}
+
+.logo {
+  height: 50px;
+  width: inherit;
+}
+
+.dropdown-nav {
+  position: absolute;
+  right: 2vw;
+  top: 2vh;
+}
+
+.dropdown-content li {
+  display: block;
+}
+
+.dropdown-nav a {
+  text-align: right;
+  display: block;
+}
+
+section.banner {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+
+  &#landing-banner {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+      url("../images/tresna-garden-1.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+  &#retreat-banner {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+      url("../images/mount-agung.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+.banner-intro {
+  width: 100%;
+  max-width: 1080px;
+  text-align: center;
+  color: $white;
+  h1 {
+    font-family: $bodyFont;
+    font-size: 3.125rem;
+    @media screen and (min-width: $tablet) and (max-width: $desktop) {
+      font-size: 2.5rem;
+    }
+    @media screen and (min-width: $mobile) and (max-width: $tablet) {
+      font-size: 1.25rem;
+    }
+  }
+
+  hr {
+    border-top: 2px solid $white;
+    width: 25%;
+    max-width: 100px;
+    min-width: 50px;
+  }
+}
+
+section.flex-container {
+  display: flex;
+  flex-direction: column-reverse;
+  @media screen and (min-width: $desktop) {
+    flex-direction: row;
+    &.reversed {
+      flex-direction: row-reverse;
+    }
+  }
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    @media screen and (min-width: $desktop) {
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 80px;
+    }
+    @media screen and (min-width: $tablet) and (max-width: $desktop) {
+      padding: 40px;
+    }
+    @media screen and (min-width: $mobile) and (max-width: $tablet) {
+      padding: 20px;
+    }
+  }
+  .column {
+    width: 100%;
+    @media screen and (min-width: $desktop) {
+      width: 50%;
+    }
+    &.thirds {
+      justify-content: flex-start;
+      width: 100%;
+      padding: 0;
+      margin-bottom: 30px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      img {
+        margin-bottom: 30px;
+      }
+      @media screen and (min-width: $desktop) {
+        width: calc(100% / 3 - 20px);
+        margin-bottom: 0;
+      }
+      @media screen and (min-width: $tablet) and (max-width: $desktop) {
+      }
+      @media screen and (min-width: $mobile) and (max-width: $tablet) {
+      }
+    }
+  }
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  &.image {
+    background-color: $black;
+  }
+  &.description {
+    ul {
+      padding-left: 18px;
+    }
+    @media screen and (min-width: $desktop) {
+      padding: 80px;
+    }
+    @media screen and (min-width: $tablet) and (max-width: $desktop) {
+      padding: 40px;
+    }
+    @media screen and (min-width: $mobile) and (max-width: $tablet) {
+      padding: 20px;
+    }
+  }
+}
+
+div#retreat-image-1,
+div#retreat-image-2,
+div#retreat-image-3 {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  @media screen and (min-width: $tablet) and (max-width: $desktop) {
+    min-height: 500px;
+    padding: 40px;
+  }
+  @media screen and (min-width: $mobile) and (max-width: $tablet) {
+    min-height: 300px;
+    padding: 20px;
+  }
+}
+
+div#retreat-image-1 {
+  background-image: url("../images/frances-1.jpg");
+}
+
+div#retreat-image-2 {
+  background-image: url("../images/offerings-3.jpg");
+}
+
+div#retreat-image-3 {
+  background-image: url("../images/god-barong-2.jpg");
+}
+
+// Google Maps Styling
+.google-maps {
+  position: relative;
+  padding-bottom: 500px;
+  height: 0;
+  overflow: hidden;
+}
+.google-maps iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.about {
+  background: #bae1fc;
+}
+
+// Owl Carousel Styling
+
+.owl-dots {
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+}
+
+// Book Now
+section#book-now {
+  padding: 150px 30px 30px 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .wrapper {
+    width: 100%;
+    max-width: 1080px;
+  }
+}
+
+/* Style inputs with type="text", select elements and textareas */
+input[type="text"],
+input[type="number"],
+input[type="email"],
+select,
+textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */
+  border: 1px solid $black;
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+input[type="submit"] {
+  background-color: $mainColor;
+  color: $white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  &:hover {
+    background-color: $primaryHover;
+  }
+}
+
+section#book-now {
+  span.required {
+    font-weight: 700;
+    color: $mainColor;
+  }
+
+  form {
+    input[type="date"] {
+      display: inline-block;
+      width: 100%;
+      border: 1px solid $black;
+      border-radius: $buttonBorderRadius;
+      padding: 12px;
+      margin: 6px 0 16px;
+      resize: none;
+    }
+
+    textarea {
+      min-height: 150px;
+      max-height: 300px;
+      resize: vertical;
+    }
+  }
+}
+section#retreat-booking-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .wrapper {
+    width: 100%;
+    max-width: 1080px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  span.required {
+    font-weight: 700;
+    color: $mainColor;
+  }
+
+  form {
+    select {
+      border: 1px solid $black;
+      border-radius: $buttonBorderRadius;
+      padding: 12px;
+      margin: 6px 0 16px;
+      height: 44px;
+    }
+
+    textarea {
+      min-height: 150px;
+      max-height: 300px;
+      resize: vertical;
+    }
+  }
+}
+
+/*---Tablet Styles----*/
+
+@media screen and (max-width: 800px) {
+  .mobile-show {
+    display: inline-block;
+  }
+
+  .homeabout {
+    min-height: 69vw;
+  }
+
+  .mobile-hide {
+    display: none;
+  }
+
+  header nav {
+    text-align: center;
+    width: 100%;
+  }
+
+  header img {
+    text-align: center;
+  }
+
+  /* Collapse columns */
+
+  .row .half-width {
+    width: 100%;
+  }
+
+  .row .half-width.left {
+    width: 100%;
+  }
+}
+
+/*----- TripAdvisor section ----------*/
+
+.tripadvisor-section .blurb-container li {
+  font-size: 2rem;
+  font-family: "Montserrat", sans-serif;
+  list-style: square inside;
+  text-align: left;
+  display: inline-block;
+}
+
+.tripadvisor-section .blurb-container i.fa-check {
+  color: #50a050;
+}
+
+/* TripAdvisor section */
+.tripadvisor-section {
+  margin-top: 0;
+  padding: 5% 0;
+}
+
+.tripadvisor-section .tripadvisor-profile {
+  font-size: 1.5rem;
+}
+
+.tripadvisor-section .review {
+  font-size: 1.6rem;
+}
+
+.tripadvisor-section .section-title {
+  margin-bottom: 40px;
+}
+
+.tripadvisor-branding .title h3 {
+  margin-bottom: 0;
+}
+
+.tripadvisor-branding .rating {
+  margin-bottom: 15px;
+  font-family: "Lora", sans-serif;
+  font-weight: 400;
+}
+
+.tripadvisor-branding:hover .title h3 {
+  color: #0091bd;
+}
+
+#tripadvisor-carousel {
+  /*margin-left: 30px;*/
+}
+
+.tripadvisor-profile {
+  text-align: right;
+  padding-right: 30px;
+}
+
+@media screen and (max-width: 800px) {
+  .tripadvisor-profile {
+    margin-top: 5%;
+    text-align: center;
+  }
+}
+
+.tripadvisor-review {
+  font-family: "Lora", sans-serif;
+}
+
+.tripadvisor-review .profile-photo img {
+  border-radius: 100%;
+  width: 75px;
+  height: 75px;
+  margin-bottom: 5px;
+  display: inline-block;
+}
+
+.tripadvisor-review .title h6 {
+  margin-bottom: 2px;
+}
+
+.owl-carousel .owl-item .rating img {
+  width: initial;
+}
+
+.owl-carousel .active {
+  border-bottom: none;
+  background: none;
+}
+
+.tripadvisor-review .rating {
+  margin-bottom: 8px;
+}
+
+.tripadvisor-review .review-link {
+  margin-top: -8px;
+}
+
+.highlight {
+  background-color: #fff2ac;
+  background-image: linear-gradient(to right, #ffe359 0%, #fff2ac 100%);
+}

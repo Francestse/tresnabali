@@ -14,14 +14,13 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Tresna Bali
-email: your-email@domain.com
-description: > # this means to ignore newlines until "baseurl:"
-  Tresna Bali Cooking School
+email: frances@tresnabali.com
+description: Come experience authentic Balinese Cooking in the heart of Ubud!
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
-port: 4005
+url: "http://www.tresnabali.com" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: saraswatibali
+github_username: johnathanfong
+port: 8080
 
 # Build settings
 markdown: kramdown
@@ -33,3 +32,6 @@ exclude:
   - Gemfile.lock
 collections:
   - reviews
+sass:
+  sass_dir: _sass
+  style: compressed
