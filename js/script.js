@@ -29,15 +29,12 @@ $(document).ready(function() {
 // Mobile Menu toggle
 
 $(document).ready(function() {
-  $(".open-menu").click(function() {
-    $("#left-menu").toggleClass("on");
-    $(".overlay").toggle();
+  $("#open").click(function() {
+    $("#dropdown-menu").toggleClass("show");
     return false;
   });
-
-  $(".overlay").click(function() {
-    $(".overlay").toggle();
-    $("#left-menu").removeClass("on");
+  $("#close").click(function() {
+    $("#dropdown-menu").toggleClass("show");
     return false;
   });
 });
