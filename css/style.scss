@@ -131,11 +131,14 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: $navPadding;
   box-shadow: $navDropshadow;
   transition: $transition;
+  padding: $navPaddingDesktop;
   &.active {
     background-color: $navActiveColor;
+  }
+  @media screen and (min-width: $mobile) and (max-width: $tablet) {
+    padding: $navPaddingMobile;
   }
 }
 
@@ -246,7 +249,7 @@ section.banner {
 
 .banner-intro {
   width: 100%;
-  max-width: 1080px;
+  max-width: 980px;
   text-align: center;
   color: $white;
   h1 {
@@ -270,7 +273,7 @@ section.banner {
 
 section.flex-container {
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
   @media screen and (min-width: $desktop) {
     flex-direction: row;
     &.reversed {
@@ -385,10 +388,6 @@ div#retreat-image-3 {
   height: 100% !important;
 }
 
-.about {
-  background: #bae1fc;
-}
-
 // Owl Carousel Styling
 
 .owl-dots {
@@ -408,9 +407,12 @@ section#retreat-booking-form {
     font-weight: 700;
     color: $mainColor;
   }
-  .wrapper {
+  .form-container {
     width: 100%;
-    max-width: 1080px;
+    max-width: 980px;
+    h1 {
+      color: $mainColor;
+    }
   }
   @media screen and (min-width: $tablet) and (max-width: $desktop) {
     padding: 40px;
@@ -433,10 +435,6 @@ form {
     border-radius: $buttonBorderRadius;
     box-sizing: border-box;
     margin: 6px 0 16px;
-  }
-  input[type="date"] {
-    display: inline-block;
-    resize: none;
   }
   input[type="checkbox"] {
     margin-right: 5px;

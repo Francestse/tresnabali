@@ -22,7 +22,8 @@ $transition: all 0.5s ease;
 
 // Navigation
 $navIndex: 9999;
-$navPadding: 15px 30px;
+$navPaddingDesktop: 15px 30px;
+$navPaddingMobile: 15px 20px;
 $navActiveColor: #fff;
 $navInactiveColor: rgba(255, 255, 255, 0.8);
 $navDropshadow: rgb(90, 90, 90) 0px 1px 15px;
