@@ -36,6 +36,10 @@ a.button {
   border: none;
   border-radius: $buttonBorderRadius;
   transition: $transition;
+  text-transform: $navLinkCase;
+  font-size: $navLinkSize;
+  font-weight: $navLinkWeight;
+  letter-spacing: $navLinkLetterSpacing;
   &.primary {
     background-color: $mainColor;
     color: $white;
@@ -84,12 +88,12 @@ footer {
           &:last-child {
             margin-bottom: 0;
           }
-          a {
-            color: $white;
-            i.fa {
-              margin-right: 10px;
-            }
+          i.fa {
+            margin-right: 10px;
           }
+        }
+        a {
+          color: $white;
         }
       }
     }
@@ -301,9 +305,6 @@ section.flex-container {
       &:last-child {
         margin-bottom: 0;
       }
-      img {
-        margin-bottom: 30px;
-      }
       @media screen and (min-width: $desktop) {
         width: calc(100% / 3 - 20px);
         margin-bottom: 0;
@@ -326,6 +327,7 @@ section.flex-container {
   }
   &.description {
     ul {
+      margin-top: 0;
       padding-left: 18px;
     }
     @media screen and (min-width: $desktop) {
