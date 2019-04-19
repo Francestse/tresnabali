@@ -238,6 +238,12 @@ section.banner {
       url("../images/tresna-garden-1.jpg");
     background-size: cover;
     background-position: center;
+    @media screen and (min-width: $mobile) and (max-width: $desktop) {
+      background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+        url("../images/tresna-garden-1-mobile.jpg");
+      background-size: cover;
+      background-position: center;
+    }
   }
   &#retreat-banner {
     background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
@@ -381,7 +387,7 @@ div#retreat-image-3 {
 }
 
 div#retreat-image-4 {
-  background-image: url("../images/mount-agung.jpg");
+  background-image: url("../images/tresna-entry-2.jpg");
 }
 
 // Google Maps Styling
