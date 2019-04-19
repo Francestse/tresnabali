@@ -26,4 +26,20 @@ $(document).ready(function() {
   });
 });
 
+// Mobile Menu toggle
+
+$(document).ready(function() {
+  $(".open-menu").click(function() {
+    $("#left-menu").toggleClass("on");
+    $(".overlay").toggle();
+    return false;
+  });
+
+  $(".overlay").click(function() {
+    $(".overlay").toggle();
+    $("#left-menu").removeClass("on");
+    return false;
+  });
+});
+
 document.getElementById("datePicker").valueAsDate = new Date();

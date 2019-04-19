@@ -25,7 +25,6 @@ h2 {
 
 a {
   text-decoration: none;
-  color: $mainColor;
   &:hover {
     text-decoration: underline;
   }
@@ -42,12 +41,16 @@ a.button {
     color: $white;
     &:hover {
       background-color: $primaryHover;
+      text-decoration: none;
     }
   }
 }
 
 p {
   font-size: $bodyFontSize;
+  a {
+    color: $mainColor;
+  }
 }
 
 img {
@@ -78,7 +81,7 @@ footer {
             margin-bottom: 0;
           }
           a {
-            color: white;
+            color: $white;
             i.fa {
               margin-right: 10px;
             }
@@ -105,14 +108,6 @@ footer {
   background-position: center;
 }
 
-.banner-no-image {
-  min-height: 100vh;
-}
-
-.mobile-show {
-  display: none;
-}
-
 .block .fa {
   margin-right: 5px;
 }
@@ -136,7 +131,8 @@ header {
   }
 }
 
-nav {
+nav#desktop-only {
+  display: none;
   ul {
     display: flex;
     flex-direction: row;
@@ -149,36 +145,34 @@ nav {
       font-weight: $navLinkWeight;
       letter-spacing: $navLinkLetterSpacing;
       margin-left: $navLinkMarginLeft;
-      a {
-        text-decoration: none;
+      a.navLink {
         color: $black;
         transition: $transition;
         &:hover {
           color: $mainColor;
+          text-decoration: underline;
         }
       }
     }
+  }
+  @media screen and (min-width: $desktop) {
+    display: block;
+  }
+}
+
+// Mobile Navigation
+nav.mobile {
+  visibility: visible;
+  display: inline-block;
+  @media screen and (min-width: $desktop) {
+    visibility: hidden;
+    display: none;
   }
 }
 
 .logo {
   height: 50px;
   width: inherit;
-}
-
-.dropdown-nav {
-  position: absolute;
-  right: 2vw;
-  top: 2vh;
-}
-
-.dropdown-content li {
-  display: block;
-}
-
-.dropdown-nav a {
-  text-align: right;
-  display: block;
 }
 
 section.banner {
@@ -453,41 +447,6 @@ section#retreat-booking-form {
       max-height: 300px;
       resize: vertical;
     }
-  }
-}
-
-/*---Tablet Styles----*/
-
-@media screen and (max-width: 800px) {
-  .mobile-show {
-    display: inline-block;
-  }
-
-  .homeabout {
-    min-height: 69vw;
-  }
-
-  .mobile-hide {
-    display: none;
-  }
-
-  header nav {
-    text-align: center;
-    width: 100%;
-  }
-
-  header img {
-    text-align: center;
-  }
-
-  /* Collapse columns */
-
-  .row .half-width {
-    width: 100%;
-  }
-
-  .row .half-width.left {
-    width: 100%;
   }
 }
 
