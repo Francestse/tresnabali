@@ -38,5 +38,3 @@ $(document).ready(function() {
     return false;
   });
 });
-
-document.getElementById("datePicker").valueAsDate = new Date();

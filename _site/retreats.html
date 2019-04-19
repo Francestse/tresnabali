@@ -65,7 +65,7 @@
 <nav class="mobile">
   <a href="#" id="open">Menu</a>
   <ul id="dropdown-menu">
-    <li><a href="/retreats">Home</a></li>
+    <li><a href="/">Home</a></li>
     <li><a href="/retreats">All-Inclusive Retreats</a></li>
     <li><a href="/book-now">Book Now</a></li>
     <li><a href="#" id="close">Close menu</a></li>
@@ -273,31 +273,80 @@
 </section>
  <!-- Retreat Booking Form -->
 <section id="retreat-booking-form" class="flex-container">
-  <div class="wrapper">
+  <div class="form-container">
     <h2>Ready to experience the <em>real</em> Bali?</h2>
+    <p>
+      <strong
+        >We try to respond to all booking requests within 24 hours.</strong
+      >
+    </p>
+    <p>
+      To help ensure our emails do not end up in your spam folder, please add
+      <a
+        href="mailto: frances@taksubali.com?subject=re:%20Tresna%20Bali%20Booking%20Request"
+        target="_top"
+        ><strong>frances@tresnabali.com</strong></a
+      >
+      to your contact list. If you do not receive a response, please contact us
+      directly:
+    </p>
+    <ul>
+      <li>
+        <strong>WhatsApp:</strong>
+        <a href="tel:+62 81 23963033">+62 81 23963033</a>
+      </li>
+      <li>
+        <strong>Email:</strong>
+        <a
+          href="mailto: frances@taksubali.com?subject=re:%20Tresna%20Bali%20Booking%20Request"
+          target="_top"
+          >frances@tresnabali.com</a
+        >
+      </li>
+    </ul>
+    <hr />
     <p><span class="required">*</span> Required Information.</p>
     <form action="https://formspree.io/Frances@taksubali.com" method="POST">
-      <label for="name">Name <span class="required">*</span></label>
+      <label for="name"
+        >Primary Contact Name <span class="required">*</span></label
+      >
       <input type="text" name="name" placeholder="Name" required />
-      <label for="country">Country</label>
-      <input type="text" name="country" placeholder="Country" />
-      <label for="email">Email <span class="required">*</span></label>
-      <input type="email" name="email" placeholder="Email" required />
-      <label for="number">Phone Number</label>
-      <input type="number" placeholder="Phone number" />
-      <label for="date">Date <span class="required">*</span></label>
-      <select name="date">
-        <option selected
-          >Sunday, October 27, 2019 - Friday, November 1, 2019</option
-        >
-        <option>Friday, November 1, 2019 - Wednesday, November 6, 2019</option>
-        <option>Monday, April 27, 2020 – Saturday, May 1, 2020</option>
-      </select>
-      <label for="comments">Comments</label>
+      <label for="number-of-guests"
+        >How many guests in total? <span class="required">*</span></label
+      >
+      <input
+        type="text"
+        name="number-of-guests"
+        placeholder="Number of guests"
+        required
+      />
+      <label for="guest-names">Name of your other guests (if applicable)</label>
       <textarea
-        name="comments"
-        placeholder="What would you like to experience on this retreat?"
+        name="guest-names"
+        placeholder="Please let us know who will be attending."
       ></textarea>
+      <label for="email">Email Address <span class="required">*</span></label>
+      <input
+        type="email"
+        name="email"
+        placeholder="What email can we best reach you at?"
+        required
+      />
+      <label for="number"
+        >Primary Contact Phone Number <span class="required">*</span></label
+      >
+      <input
+        type="number"
+        placeholder="+(country code) phone number"
+        required
+      />
+      <label for="date">Which retreat dates are you interested in?</label>
+      <select name="date">
+        <option selected>Please select a retreat date.</option>
+        <option>Sunday, October 27, 2019 - Friday, November 1, 2019</option>
+        <option>Friday, November 1, 2019 - Wednesday, November 6, 2019</option>
+        <option>April 2020 (Dates TBD)</option>
+      </select>
       <button type="submit" class="primary">Complete Booking Request</button>
     </form>
   </div>

@@ -53,6 +53,10 @@ p {
   }
 }
 
+li a {
+  color: $mainColor;
+}
+
 img {
   width: 100%;
   max-width: 100%;
@@ -181,7 +185,7 @@ nav.mobile {
     height: 100vh;
     left: -100%;
     background: $mainColor;
-    z-index: 9999;
+    z-index: $navIndex;
     width: 100%;
     transition: all 0.3s ease;
     display: flex;
@@ -208,6 +212,10 @@ nav.mobile {
 .logo {
   height: 50px;
   width: inherit;
+}
+
+.page-wrapper {
+  padding-top: 86px;
 }
 
 section.banner {
@@ -388,199 +396,164 @@ div#retreat-image-3 {
 }
 
 // Book Now
-section#book-now {
-  padding: 150px 30px 30px 30px;
+section#book-now,
+section#retreat-booking-form {
+  padding: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
-  .wrapper {
-    width: 100%;
-    max-width: 1080px;
-  }
-}
-
-/* Style inputs with type="text", select elements and textareas */
-input[type="text"],
-input[type="number"],
-input[type="email"],
-select,
-textarea {
-  width: 100%; /* Full width */
-  padding: 12px; /* Some padding */
-  border: 1px solid $black;
-  border-radius: 4px; /* Rounded borders */
-  box-sizing: border-box; /* Make sure that padding and width stays in place */
-  margin-top: 6px; /* Add a top margin */
-  margin-bottom: 16px; /* Bottom margin */
-  resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
-}
-
-/* Style the submit button with a specific background color etc */
-input[type="submit"] {
-  background-color: $mainColor;
-  color: $white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  &:hover {
-    background-color: $primaryHover;
-  }
-}
-
-section#book-now {
   span.required {
     font-weight: 700;
     color: $mainColor;
   }
-
-  form {
-    input[type="date"] {
-      display: inline-block;
-      width: 100%;
-      border: 1px solid $black;
-      border-radius: $buttonBorderRadius;
-      padding: 12px;
-      margin: 6px 0 16px;
-      resize: none;
-    }
-
-    textarea {
-      min-height: 150px;
-      max-height: 300px;
-      resize: vertical;
-    }
-  }
-}
-section#retreat-booking-form {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   .wrapper {
     width: 100%;
     max-width: 1080px;
+  }
+  @media screen and (min-width: $tablet) and (max-width: $desktop) {
+    padding: 40px;
+  }
+  @media screen and (min-width: $mobile) and (max-width: $tablet) {
+    padding: 20px;
+  }
+}
+
+form {
+  input[type="text"],
+  input[type="number"],
+  input[type="email"],
+  input[type="date"],
+  select,
+  textarea {
+    width: 100%;
+    padding: $buttonPadding;
+    border: 1px solid $black;
+    border-radius: $buttonBorderRadius;
+    box-sizing: border-box;
+    margin: 6px 0 16px;
+  }
+  input[type="date"] {
+    display: inline-block;
+    resize: none;
+  }
+  input[type="checkbox"] {
+    margin-right: 5px;
+  }
+  select {
+    height: 44px;
+  }
+
+  textarea {
+    min-height: 150px;
+    max-height: 300px;
+    resize: vertical;
+  }
+  .subsection {
     display: flex;
     flex-direction: column;
+    margin: 6px 0 16px;
   }
-
-  span.required {
-    font-weight: 700;
-    color: $mainColor;
-  }
-
-  form {
-    select {
-      border: 1px solid $black;
-      border-radius: $buttonBorderRadius;
-      padding: 12px;
-      margin: 6px 0 16px;
-      height: 44px;
-    }
-
-    textarea {
-      min-height: 150px;
-      max-height: 300px;
-      resize: vertical;
-    }
+  .checklist-item {
+    margin-bottom: 16px;
   }
 }
 
 /*----- TripAdvisor section ----------*/
 
-.tripadvisor-section .blurb-container li {
-  font-size: 2rem;
-  font-family: "Montserrat", sans-serif;
-  list-style: square inside;
-  text-align: left;
-  display: inline-block;
-}
-
-.tripadvisor-section .blurb-container i.fa-check {
-  color: #50a050;
-}
-
-/* TripAdvisor section */
-.tripadvisor-section {
-  margin-top: 0;
-  padding: 5% 0;
-}
-
-.tripadvisor-section .tripadvisor-profile {
-  font-size: 1.5rem;
-}
-
-.tripadvisor-section .review {
-  font-size: 1.6rem;
-}
-
-.tripadvisor-section .section-title {
-  margin-bottom: 40px;
-}
-
-.tripadvisor-branding .title h3 {
-  margin-bottom: 0;
-}
-
-.tripadvisor-branding .rating {
-  margin-bottom: 15px;
-  font-family: "Lora", sans-serif;
-  font-weight: 400;
-}
-
-.tripadvisor-branding:hover .title h3 {
-  color: #0091bd;
-}
-
-#tripadvisor-carousel {
-  /*margin-left: 30px;*/
-}
-
-.tripadvisor-profile {
-  text-align: right;
-  padding-right: 30px;
-}
-
-@media screen and (max-width: 800px) {
-  .tripadvisor-profile {
-    margin-top: 5%;
-    text-align: center;
-  }
-}
-
-.tripadvisor-review {
-  font-family: "Lora", sans-serif;
-}
-
-.tripadvisor-review .profile-photo img {
-  border-radius: 100%;
-  width: 75px;
-  height: 75px;
-  margin-bottom: 5px;
-  display: inline-block;
-}
-
-.tripadvisor-review .title h6 {
-  margin-bottom: 2px;
-}
-
-.owl-carousel .owl-item .rating img {
-  width: initial;
-}
-
-.owl-carousel .active {
-  border-bottom: none;
-  background: none;
-}
-
-.tripadvisor-review .rating {
-  margin-bottom: 8px;
-}
-
-.tripadvisor-review .review-link {
-  margin-top: -8px;
-}
-
-.highlight {
-  background-color: #fff2ac;
-  background-image: linear-gradient(to right, #ffe359 0%, #fff2ac 100%);
-}
+// .tripadvisor-section .blurb-container li {
+//   font-size: 2rem;
+//   font-family: "Montserrat", sans-serif;
+//   list-style: square inside;
+//   text-align: left;
+//   display: inline-block;
+// }
+//
+// .tripadvisor-section .blurb-container i.fa-check {
+//   color: #50a050;
+// }
+//
+// /* TripAdvisor section */
+// .tripadvisor-section {
+//   margin-top: 0;
+//   padding: 5% 0;
+// }
+//
+// .tripadvisor-section .tripadvisor-profile {
+//   font-size: 1.5rem;
+// }
+//
+// .tripadvisor-section .review {
+//   font-size: 1.6rem;
+// }
+//
+// .tripadvisor-section .section-title {
+//   margin-bottom: 40px;
+// }
+//
+// .tripadvisor-branding .title h3 {
+//   margin-bottom: 0;
+// }
+//
+// .tripadvisor-branding .rating {
+//   margin-bottom: 15px;
+//   font-family: "Lora", sans-serif;
+//   font-weight: 400;
+// }
+//
+// .tripadvisor-branding:hover .title h3 {
+//   color: #0091bd;
+// }
+//
+// #tripadvisor-carousel {
+//   /*margin-left: 30px;*/
+// }
+//
+// .tripadvisor-profile {
+//   text-align: right;
+//   padding-right: 30px;
+// }
+//
+// @media screen and (max-width: 800px) {
+//   .tripadvisor-profile {
+//     margin-top: 5%;
+//     text-align: center;
+//   }
+// }
+//
+// .tripadvisor-review {
+//   font-family: "Lora", sans-serif;
+// }
+//
+// .tripadvisor-review .profile-photo img {
+//   border-radius: 100%;
+//   width: 75px;
+//   height: 75px;
+//   margin-bottom: 5px;
+//   display: inline-block;
+// }
+//
+// .tripadvisor-review .title h6 {
+//   margin-bottom: 2px;
+// }
+//
+// .owl-carousel .owl-item .rating img {
+//   width: initial;
+// }
+//
+// .owl-carousel .active {
+//   border-bottom: none;
+//   background: none;
+// }
+//
+// .tripadvisor-review .rating {
+//   margin-bottom: 8px;
+// }
+//
+// .tripadvisor-review .review-link {
+//   margin-top: -8px;
+// }
+//
+// .highlight {
+//   background-color: #fff2ac;
+//   background-image: linear-gradient(to right, #ffe359 0%, #fff2ac 100%);
+// }
