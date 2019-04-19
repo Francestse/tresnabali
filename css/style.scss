@@ -350,7 +350,8 @@ section.flex-container {
 
 div#retreat-image-1,
 div#retreat-image-2,
-div#retreat-image-3 {
+div#retreat-image-3,
+div#retreat-image-4 {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -374,6 +375,10 @@ div#retreat-image-2 {
 
 div#retreat-image-3 {
   background-image: url("../images/god-barong-2.jpg");
+}
+
+div#retreat-image-4 {
+  background-image: url("../images/mount-agung.jpg");
 }
 
 // Google Maps Styling
