@@ -1,10 +1,10 @@
 ---
 username: DayTrip61247
-location: 'Atlanta, USA'
-profile-pic: 'https://media-cdn.tripadvisor.com/media/photo-s/01/2e/70/93/avatar019.jpg'
+location: "Atlanta, USA"
+profile-pic: "https://media-cdn.tripadvisor.com/media/photo-s/01/2e/70/93/avatar019.jpg"
 number-reviews:
 title: The highlight of our honeymoon in Bali!
-rating: '5'
+rating: "5"
 permalink: >-
   //www.tripadvisor.co.uk/ShowUserReviews-g297701-d12396111-r616061054-Tresna_Bali_Cooking_School-Ubud_Gianyar_Bali.html
 ---
