@@ -1,62 +1,43 @@
 <!-- Trip Advisor Reviews (Manual Input) -->
-<section class="tripadvisor-section">
-  <div class="grid no-margin">
-    <div class="container">
-      <div class="grid">
-        <div class="col-2_sm-12 tripadvisor-branding" align="center">
-          <div class="title">
-            <h5>
-              <a
-                href="https://www.tripadvisor.co.uk/Attraction_Review-g297701-d12396111-Reviews-Tresna_Bali_Cooking_School-Ubud_Bali.html"
-              >
-                Tresna Bali Cooking School</a
-              >
-            </h5>
-          </div>
-
-          <div class="rating">
-            <img src="/images/tripadvisor/rating-5.png" alt="5/5" /> <br /><span
-              class="editable"
-              >77</span
-            >
-            reviews
-          </div>
-
-          <div class="ta-logo">
-            <a
-              href="https://www.tripadvisor.co.uk/Attraction_Review-g297701-d12396111-Reviews-Tresna_Bali_Cooking_School-Ubud_Bali.html"
-            >
-              <img src="/images/tripadvisor/ta_logo.png" alt="Tripadvisor logo"
-            /></a>
-          </div>
-        </div>
-
-        <div class="col-10">
-          <div class="owl-carousel owl-theme" id="tripadvisor-carousel">
-            {% for review in site.reviews reversed %}
-            <div class="tripadvisor-review grid">
-              <div class="tripadvisor-profile col-3_sm-12">
-                <div class="profile-photo">
-                  <img src="{{review.profile-pic}}" alt="" />
-                </div>
-                <div class="username">{{review.username}}</div>
-                <div class="location">{{review.location}}</div>
-              </div>
-              <div class="tripadvisor-body col-9_sm-12">
-                <div class="title">
-                  <h6><em>"{{review.title}}"</em></h6>
-                </div>
-                <div class="rating">
-                  <img src="/images/tripadvisor/rating-5.png" alt="5/5" />
-                </div>
-                <div class="review">{{review.content}}</div>
-              </div>
-            </div>
-            {% endfor %}
-          </div>
-        </div>
+<section id="tripadvisor" class="flex-container">
+  <div class="wrapper">
+    <div class="tripadvisor-summary">
+      <div class="tripadvisor-logo">
+        <a
+          href="https://www.tripadvisor.co.uk/Attraction_Review-g297701-d12396111-Reviews-Tresna_Bali_Cooking_School-Ubud_Bali.html"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><img
+            src="images/tripadvisor/tripadvisor-logo.svg"
+            alt="TripAdvisor
+        Logo"
+        /></a>
       </div>
+      <a
+        href="https://www.tripadvisor.co.uk/Attraction_Review-g297701-d12396111-Reviews-Tresna_Bali_Cooking_School-Ubud_Bali.html"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <h2>Tresna Bali Cooking School</h2></a
+      >
+      <div class="rating">
+        {% include tripadvisor-stars.html %}
+        <p>96 Reviews</p>
+      </div>
+    </div>
+    <div id="tripadvisor-reviews" class="owl-carousel owl-theme">
+      {% for review in site.reviews reversed %}
+      <div class="tripadvisor-review">
+        <img
+          class="tripadvisor-user-photo"
+          src="{{review.profile-pic}}"
+          alt="Photo of {{review.username}}"
+        />
+        <p><strong>{{review.username}}</strong> ({{review.location}})</p>
+        <h3><em>"{{review.title}}"</em></h3>
+        {% include tripadvisor-stars.html %} {{review.content}}
+      </div>
+      {% endfor %}
     </div>
   </div>
 </section>
-<!-- end tripadvisor-section -->

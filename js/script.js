@@ -9,20 +9,24 @@ $(document).ready(function() {
   });
 });
 
-$(document).ready(function() {
-  $(".dropdown-nav").click(function() {
-    $(this)
-      .children(".dropdown-content")
-      .slideToggle();
-  });
-});
-
+// Owl Carousel Settings
 $(document).ready(function() {
   $(".owl-carousel").owlCarousel({
     items: 1,
     loop: true,
     margin: 10,
     nav: false
+  });
+});
+
+$(document).ready(function() {
+  $("#tripadvisor-reviews").owlCarousel({
+    items: 1,
+    loop: true,
+    margin: 10,
+    nav: false,
+    autoplay: true,
+    autoplayHoverPause: true
   });
 });
 
