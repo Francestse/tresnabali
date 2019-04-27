@@ -458,6 +458,9 @@ form {
   input[type="checkbox"] {
     margin-right: 5px;
   }
+  input[type="date"] {
+    resize: none;
+  }
   select {
     height: 44px;
   }
