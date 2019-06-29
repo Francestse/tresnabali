@@ -157,33 +157,38 @@
       <label for="name"
         >Primary Contact Name <span class="required">*</span></label
       >
-      <input type="text" name="name" placeholder="Name" required />
+      <input type="text" name="name" id="name" placeholder="Name" required />
       <label for="number-of-guests"
         >How many guests in total? <span class="required">*</span></label
       >
       <input
         type="text"
         name="number-of-guests"
+        id="number-of-guests"
         placeholder="Number of guests"
         required
       />
       <label for="guest-names">Name of your other guests (if applicable)</label>
       <textarea
         name="guest-names"
+        id="guest-names"
         placeholder="Please let us know who will be attending."
       ></textarea>
       <label for="email">Email Address <span class="required">*</span></label>
       <input
         type="email"
         name="email"
+        id="email"
         placeholder="What email can we best reach you at?"
         required
       />
-      <label for="number"
+      <label for="phone-number"
         >Primary Contact Phone Number <span class="required">*</span></label
       >
       <input
-        type="number"
+        type="telephone"
+        name="phone-number"
+        id="phone-number"
         placeholder="+(country code) phone number"
         required
       />
@@ -193,6 +198,7 @@
       >
       <textarea
         name="hotel"
+        id="hotel"
         placeholder="If you haven't booked accommodations yet, or are interested in Tresna Bali Retreats, please inform us."
         required
       ></textarea>
@@ -202,8 +208,9 @@
         <h3>Cooking Classes</h3>
         <div class="checklist-item">
           <input
-            id="balinese-feast"
             type="checkbox"
+            name="balinese-feast"
+            id="balinese-feast"
             value="Balinese Feast Cooking Class - every Tuesday, Thursday, Friday and alternating Saturday and Sunday"
           />
           <label for="balinese-feast"
@@ -213,8 +220,9 @@
         </div>
         <div class="checklist-item">
           <input
-            id="vegan"
             type="checkbox"
+            name="vegan"
+            id="vegan"
             value="Balinese Feast Cooking Class - every Tuesday, Thursday, Friday and alternating Saturday and Sunday"
           />
           <label for="vegan"
@@ -224,16 +232,16 @@
       </div>
       <div class="subsection">
         <label for="first-choice">Prefered Date</label>
-        <input type="date" name="first-choice" />
+        <input type="date" name="first-choice" id="first-choice" />
         <label for="second-choice">Second choice</label>
-        <input type="date" name="second-choice" />
+        <input type="date" name="second-choice" id="second-choice" />
         <label for="third-choice">Third choice</label>
-        <input type="date" name="third-choice" />
+        <input type="date" name="third-choice" id="third-choice" />
       </div>
       <div id="private-cooking-class" class="subsection">
         <h3>Private Kitchen Event</h3>
         <label for="private-date">What date are you looking at?</label>
-        <input type="date" name="private-date" id="datePicker" />
+        <input type="date" name="private-date" id="private-date" />
       </div>
       <!--
         <div id="retreats" class="subsection">
