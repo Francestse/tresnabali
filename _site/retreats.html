@@ -459,13 +459,20 @@
           <label for="name"
             >Primary Contact Name <span class="required">*</span></label
           >
-          <input type="text" name="name" placeholder="Name" required />
+          <input
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Name"
+            required
+          />
           <label for="number-of-guests"
             >How many guests in total? <span class="required">*</span></label
           >
           <input
             type="text"
             name="number-of-guests"
+            id="number-of-guests"
             placeholder="Number of guests"
             required
           />
@@ -474,6 +481,7 @@
           >
           <textarea
             name="guest-names"
+            id="guest-names"
             placeholder="Please let us know who will be attending."
           ></textarea>
           <label for="email"
@@ -482,14 +490,17 @@
           <input
             type="email"
             name="email"
+            id="email"
             placeholder="What email can we best reach you at?"
             required
           />
-          <label for="telephone"
+          <label for="phone-number"
             >Primary Contact Phone Number <span class="required">*</span></label
           >
           <input
             type="telephone"
+            name="phone-number"
+            id="phone-number"
             placeholder="+(country code) phone number"
             required
           />
