@@ -15,7 +15,10 @@ $(document).ready(function() {
     items: 1,
     loop: true,
     margin: 10,
-    nav: false
+    nav: false,
+    autoplay: true,
+    autoplayTimeout: 3000,
+    autoplayHoverPause: true
   });
 });
 
@@ -26,6 +29,7 @@ $(document).ready(function() {
     margin: 10,
     nav: false,
     autoplay: true,
+    autoplayTimeout: 3000,
     autoplayHoverPause: true
   });
 });

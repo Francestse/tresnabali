@@ -92,8 +92,17 @@
   <body class="post-page">
     <!-- header-section -->
     <header>
-  <a href="/">
-    <img class="logo" src="/images/logo.svg" alt="Tresna Bali Logo" />
+  <!-- desktop logo -->
+  <a href="/" class="logo desktop">
+    <img class="logo desktop" src="/images/logo.svg" alt="Tresna Bali Logo" />
+  </a>
+  <!-- mobile logo -->
+  <a href="/" class="logo mobile">
+    <img
+      class="logo mobile"
+      src="/images/logo-icon-only.svg"
+      alt="Tresna Bali Logo"
+    />
   </a>
   <nav id="desktop-only">
   <ul>
@@ -107,7 +116,12 @@
 
 <!-- Mobile Menu -->
 <nav class="mobile">
-  <a href="#" id="open">Menu</a>
+  <ul>
+    <li><a href="#" id="open">Menu</a></li>
+    <li>
+      <a id="book-now" class="button primary" href="/book-now">Book Now</a>
+    </li>
+  </ul>
   <ul id="dropdown-menu">
     <li><a href="/">Home</a></li>
     <li><a class="navLink" href="/retreats">Retreats</a></li>
