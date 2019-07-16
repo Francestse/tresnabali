@@ -175,6 +175,28 @@ nav#desktop-only {
 nav.mobile {
   visibility: visible;
   display: inline-block;
+  ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    li {
+      list-style: none;
+      text-transform: $navLinkCase;
+      font-size: $navLinkSize;
+      font-weight: $navLinkWeight;
+      letter-spacing: $navLinkLetterSpacing;
+      margin-left: $navLinkMarginLeft;
+      a.navLink {
+        color: $black;
+        transition: $transition;
+        &:hover {
+          color: $mainColor;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
   a#open {
     color: $black;
     transition: $transition;
