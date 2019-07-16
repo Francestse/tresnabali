@@ -238,9 +238,27 @@ nav.mobile {
   }
 }
 
-.logo {
-  height: 50px;
-  width: inherit;
+a.logo {
+  img {
+    height: 50px;
+    width: inherit;
+  }
+  &.desktop {
+    visibility: hidden;
+    display: none;
+    @media screen and (min-width: $desktop) {
+      display: block;
+      visibility: visible;
+    }
+  }
+  &.mobile {
+    display: block;
+    visibility: visible;
+    @media screen and (min-width: $desktop) {
+      visibility: hidden;
+      display: none;
+    }
+  }
 }
 
 .page-wrapper {
