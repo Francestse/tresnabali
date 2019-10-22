@@ -587,8 +587,9 @@ div#tripadvisor-reviews {
     text-align: center;
 }
 
-/* Acuity Scheduling */
+/* Pull up the TA footer closer to Acuity Scheduling */
 
-#acuity-footer {
-    display: none !important;
+#acuity {
+    margin-bottom: -150px;
 }
+
