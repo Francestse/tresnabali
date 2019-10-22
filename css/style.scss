@@ -581,6 +581,9 @@ div#tripadvisor-reviews {
 /* MLC */
 
 .center-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
 }
 
