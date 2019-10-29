@@ -596,11 +596,11 @@ div#tripadvisor-reviews {
 /* Feature External Blogs - mlc 29 Oct 2019 */
 
 .col-spacing {
-    margin-left: var($col-gutters);
-    margin-right: var($col-gutters);
+    margin-left: $col-gutters;
+    margin-right: $col-gutters;
 }
 
 #featured-external-blogs {
-    padding-top: var($top-bottom-padding);
-    padding-bottom: var($top-bottom-padding);
+    padding-top: $top-bottom-padding;
+    padding-bottom: $top-bottom-padding;
 }
