@@ -375,7 +375,7 @@ section.flex-container {
   justify-content: center;
   align-items: flex-start;
   &.image {
-    background-color: $black;
+    background-color: $clear; // mlc 29 Oct 2019
   }
   &.description {
     a.button.primary {
@@ -578,7 +578,7 @@ div#tripadvisor-reviews {
   }
 }
 
-/* MLC */
+/* Acuity Panel - mlc 23 Oct 2019 */
 
 .center-text {
     display: flex;
@@ -592,6 +592,8 @@ div#tripadvisor-reviews {
 #acuity {
     margin-bottom: -150px;
 }
+
+/* Feature External Blogs - mlc 29 Oct 2019 */
 
 .col-spacing {
     margin-left: var($col-gutters);
