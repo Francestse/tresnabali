@@ -593,17 +593,12 @@ div#tripadvisor-reviews {
     margin-bottom: -150px;
 }
 
-:root {
-  --col-gutters: 2%;
-  --top-bottom-padding: 2%;
-}
-
 .col-spacing {
-    margin-left: var(--col-gutters);
-    margin-right: var(--col-gutters);
+    margin-left: var($col-gutters);
+    margin-right: var($col-gutters);
 }
 
 #featured-external-blogs {
-    padding-top: var(--top-bottom-padding);
-    padding-bottom: var(--top-bottom-padding);
+    padding-top: var($top-bottom-padding);
+    padding-bottom: var($top-bottom-padding);
 }
