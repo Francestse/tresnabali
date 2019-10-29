@@ -593,3 +593,11 @@ div#tripadvisor-reviews {
     margin-bottom: -150px;
 }
 
+:root {
+  --col-gutters: 2%;
+}
+
+.col-spacing {
+    padding-left: var(--col-gutters);
+    padding-right: var(--col-gutters);
+}
