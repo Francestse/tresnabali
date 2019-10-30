@@ -395,6 +395,24 @@ section.flex-container {
       padding: 20px;
     }
   }
+  &.heading { // mlc 30 Oct 2019
+    a.button.primary {
+      margin-top: 16px;
+    }
+    ul {
+      margin-top: 0;
+      padding-left: 18px;
+    }
+    @media screen and (min-width: $desktop) {
+      padding: 1%;
+    }
+    @media screen and (min-width: $tablet) and (max-width: $desktop) {
+      padding: 1%;
+    }
+    @media screen and (min-width: $mobile) and (max-width: $tablet) {
+      padding: .5%;
+    }
+  }
 }
 
 div#retreat-image-1,
