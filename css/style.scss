@@ -275,12 +275,12 @@ section.banner {
 
   &#landing-banner {
     background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-      url("../images/landing-page-banner.jpg");
+      url("../images/landing-page-banner-tresna-bali-cooking-school.jpg");
     background-size: cover;
     background-position: center;
     @media screen and (min-width: $mobile) and (max-width: $desktop) {
       background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-        url("../images/landing-page-banner-mobile.jpg");
+        url("../images/landing-page-banner-mobile-tresna-bali-cooking-school.jpg");
       background-size: cover;
       background-position: center;
     }
